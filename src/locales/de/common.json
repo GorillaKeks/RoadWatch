@@ -39,7 +39,7 @@
       "title": "TruckersMP",
       "description": "Verbindung zu deiner VTC und deinem TruckersMP-Konto.",
       "vtcId": "TruckersMP VTC-ID",
-      "vtcIdPlaceholder": "z. B. 7265",
+      "vtcIdPlaceholder": "z. B. 12345",
       "vtcIdHelp": "Die ID deiner TruckersMP VTC.",
       "myTruckersmpId": "Meine TruckersMP-ID",
       "truckersmpIdPlaceholder": "z. B. 12345678",
