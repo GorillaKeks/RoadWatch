@@ -5,6 +5,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { useTranslation } from "react-i18next";
 import {
   RefreshCw,
   Settings,
@@ -28,52 +29,9 @@ import { getSettings } from "../services/tauri/settingsService";
 const PLAYER_REFRESH_INTERVAL_MS = 60_000;
 const TIME_UPDATE_INTERVAL_MS = 1_000;
 
-function getLastUpdatedText(
-  lastUpdated: Date | null,
-): string {
-  if (!lastUpdated) {
-    return "Noch nicht aktualisiert";
-  }
-
-  const secondsAgo = Math.max(
-    0,
-    Math.floor(
-      (Date.now() - lastUpdated.getTime()) / 1_000,
-    ),
-  );
-
-  if (secondsAgo < 5) {
-    return "gerade eben aktualisiert";
-  }
-
-  if (secondsAgo < 60) {
-    return `vor ${secondsAgo} Sekunden aktualisiert`;
-  }
-
-  const minutesAgo = Math.floor(
-    secondsAgo / 60,
-  );
-
-  if (minutesAgo === 1) {
-    return "vor 1 Minute aktualisiert";
-  }
-
-  if (minutesAgo < 60) {
-    return `vor ${minutesAgo} Minuten aktualisiert`;
-  }
-
-  const hoursAgo = Math.floor(
-    minutesAgo / 60,
-  );
-
-  if (hoursAgo === 1) {
-    return "vor 1 Stunde aktualisiert";
-  }
-
-  return `vor ${hoursAgo} Stunden aktualisiert`;
-}
-
 function App() {
+  const { t } = useTranslation();
+
   const [searchTerm, setSearchTerm] =
     useState("");
 
@@ -111,6 +69,61 @@ function App() {
 
   const isRequestRunningRef =
     useRef(false);
+
+  const getLastUpdatedText = useCallback(
+    (
+      updated: Date | null,
+    ): string => {
+      if (!updated) {
+        return t("lastUpdated.notUpdated");
+      }
+
+      const secondsAgo = Math.max(
+        0,
+        Math.floor(
+          (Date.now() - updated.getTime()) /
+            1_000,
+        ),
+      );
+
+      if (secondsAgo < 5) {
+        return t("lastUpdated.justNow");
+      }
+
+      if (secondsAgo < 60) {
+        return t("lastUpdated.seconds", {
+          count: secondsAgo,
+        });
+      }
+
+      const minutesAgo = Math.floor(
+        secondsAgo / 60,
+      );
+
+      if (minutesAgo === 1) {
+        return t("lastUpdated.oneMinute");
+      }
+
+      if (minutesAgo < 60) {
+        return t("lastUpdated.minutes", {
+          count: minutesAgo,
+        });
+      }
+
+      const hoursAgo = Math.floor(
+        minutesAgo / 60,
+      );
+
+      if (hoursAgo === 1) {
+        return t("lastUpdated.oneHour");
+      }
+
+      return t("lastUpdated.hours", {
+        count: hoursAgo,
+      });
+    },
+    [t],
+  );
 
   useEffect(() => {
     getBackendStatus()
@@ -169,7 +182,7 @@ function App() {
         );
 
         setPlayerError(
-          "Spielerdaten konnten nicht aktualisiert werden.",
+          t("dashboard.playerUpdateFailed"),
         );
       } finally {
         setIsLoadingPlayers(false);
@@ -178,7 +191,7 @@ function App() {
         isRequestRunningRef.current = false;
       }
     },
-    [],
+    [t],
   );
 
   useEffect(() => {
@@ -278,7 +291,8 @@ function App() {
           />
 
           <div className="backend-status">
-            Rust: {backendStatus}
+            {t("dashboard.backend")}:{" "}
+            {backendStatus}
           </div>
 
           <div className="live-status">
@@ -292,14 +306,16 @@ function App() {
 
             <span className="live-status-label">
               {isRefreshingPlayers
-                ? "Aktualisiere"
-                : "Live"}
+                ? t("dashboard.refreshing")
+                : t("dashboard.live")}
             </span>
 
             <span className="live-status-time">
-              ·{" "}
+              {" · "}
               {isRefreshingPlayers
-                ? "Daten werden aktualisiert..."
+                ? t(
+                    "dashboard.loadingPlayers",
+                  )
                 : lastUpdatedText}
             </span>
 
@@ -313,8 +329,10 @@ function App() {
                 isLoadingPlayers ||
                 isRefreshingPlayers
               }
-              title="Jetzt aktualisieren"
-              aria-label="Jetzt aktualisieren"
+              title={t("dashboard.refreshNow")}
+              aria-label={t(
+                "dashboard.refreshNow",
+              )}
             >
               <RefreshCw
                 size={16}
@@ -325,7 +343,7 @@ function App() {
                 }
               />
 
-              Aktualisieren
+              {t("dashboard.refresh")}
             </button>
           </div>
 
@@ -343,8 +361,10 @@ function App() {
           onClick={() =>
             setShowSettings(true)
           }
-          title="Einstellungen"
-          aria-label="Einstellungen"
+          title={t("dashboard.settings")}
+          aria-label={t(
+            "dashboard.settings",
+          )}
         >
           <Settings size={20} />
         </button>
@@ -352,7 +372,9 @@ function App() {
 
       {currentPlayer && (
         <section className="current-player-section">
-          <br />
+          <h2>
+            {t("dashboard.currentPlayer")}
+          </h2>
 
           <PlayerCard
             player={currentPlayer}
@@ -361,7 +383,9 @@ function App() {
       )}
 
       <section className="vtc-members-section">
-        <h2>VTC Mitglieder</h2>
+        <h2>
+          {t("dashboard.members")}
+        </h2>
 
         <section className="controls">
           <PlayerSearch
@@ -378,7 +402,9 @@ function App() {
         {isLoadingPlayers &&
           players.length === 0 && (
             <div className="empty-state">
-              Spielerdaten werden geladen...
+              {t(
+                "dashboard.loadingPlayers",
+              )}
             </div>
           )}
 

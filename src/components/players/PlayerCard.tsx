@@ -1,11 +1,16 @@
 import { MapPin } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import type { Player } from "../../types/player";
 
 interface PlayerCardProps {
   player: Player;
 }
 
-export function PlayerCard({ player }: PlayerCardProps) {
+export function PlayerCard({
+  player,
+}: PlayerCardProps) {
+  const { t } = useTranslation();
+
   const initial = player.username
     .replace(/[^a-zA-Z0-9]/g, "")
     .charAt(0)
@@ -18,18 +23,27 @@ export function PlayerCard({ player }: PlayerCardProps) {
         ? "ATS"
         : undefined;
 
+  const statusLabel =
+    player.status === "online"
+      ? t("dashboard.online")
+      : t("dashboard.offline");
+
   return (
     <article className="player-card">
       <div className="status-column">
         <span
           className={`status-dot ${player.status}`}
-          title={player.status}
+          title={statusLabel}
+          aria-label={statusLabel}
         />
       </div>
 
       <div className="player-avatar">
         {player.avatarUrl ? (
-          <img src={player.avatarUrl} alt="" />
+          <img
+            src={player.avatarUrl}
+            alt={`${player.username} avatar`}
+          />
         ) : (
           <span>{initial}</span>
         )}

@@ -6,13 +6,59 @@
     "members": "VTC Mitglieder",
     "online": "Online",
     "offline": "Offline",
-    "all": "Alle"
+    "all": "Alle",
+    "currentPlayer": "Mein Fahrer",
+    "backend": "Rust",
+    "live": "Live",
+    "refreshing": "Aktualisiere",
+    "updatingNow": "Daten werden aktualisiert...",
+    "refresh": "Aktualisieren",
+    "refreshNow": "Jetzt aktualisieren",
+    "notUpdatedYet": "Noch nicht aktualisiert",
+    "updatedJustNow": "gerade eben aktualisiert",
+    "updatedSecondsAgo": "vor {{count}} Sekunden aktualisiert",
+    "updatedOneMinuteAgo": "vor 1 Minute aktualisiert",
+    "updatedMinutesAgo": "vor {{count}} Minuten aktualisiert",
+    "updatedOneHourAgo": "vor 1 Stunde aktualisiert",
+    "updatedHoursAgo": "vor {{count}} Stunden aktualisiert",
+    "membersTitle": "VTC Mitglieder",
+    "loadingPlayers": "Spielerdaten werden geladen...",
+    "playerUpdateError": "Spielerdaten konnten nicht aktualisiert werden."
   },
   "search": {
     "placeholder": "Spieler suchen..."
   },
   "players": {
     "empty": "Keine Spieler gefunden."
+  },
+  "settings": {
+    "back": "Zurück",
+    "title": "Einstellungen",
+    "subtitle": "Konfiguriere deine RoadWatch-Verbindung.",
+    "truckersmp": {
+      "title": "TruckersMP",
+      "description": "Verbindung zu deiner VTC und deinem TruckersMP-Konto.",
+      "vtcId": "TruckersMP VTC-ID",
+      "vtcIdPlaceholder": "z. B. 7265",
+      "vtcIdHelp": "Die ID deiner TruckersMP VTC.",
+      "myTruckersmpId": "Meine TruckersMP-ID",
+      "truckersmpIdPlaceholder": "z. B. 12345678",
+      "truckersmpIdHelp": "Deine persönliche TruckersMP-ID. Sie wird für deine eigene Live-Position und die Entfernungsberechnung verwendet."
+    },
+    "general": {
+      "title": "Allgemein",
+      "description": "Allgemeine RoadWatch-Einstellungen.",
+      "language": "Sprache"
+    },
+    "save": "Speichern",
+    "saving": "Speichern...",
+    "messages": {
+      "loadError": "Einstellungen konnten nicht geladen werden.",
+      "missingVtcId": "Bitte gib eine TruckersMP VTC-ID ein.",
+      "missingTruckersmpId": "Bitte gib deine TruckersMP-ID ein.",
+      "saved": "Einstellungen wurden gespeichert.",
+      "saveError": "Einstellungen konnten nicht gespeichert werden."
+    }
   },
   "language": {
     "de": "Deutsch",

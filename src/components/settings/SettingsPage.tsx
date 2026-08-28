@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
-import { ArrowLeft, Languages, Save, Truck } from "lucide-react";
+import {
+  ArrowLeft,
+  Languages,
+  Save,
+  Truck,
+} from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import type { AppSettings } from "../../types/settings";
@@ -12,49 +17,87 @@ interface SettingsPageProps {
   onBack: () => void;
 }
 
-export function SettingsPage({ onBack }: SettingsPageProps) {
-  const { i18n } = useTranslation();
+export function SettingsPage({
+  onBack,
+}: SettingsPageProps) {
+  const { t, i18n } = useTranslation();
 
-  const [vtcId, setVtcId] = useState("");
-  const [truckersmpId, setTruckersmpId] = useState("");
+  const [vtcId, setVtcId] =
+    useState("");
 
-  const [isLoading, setIsLoading] = useState(true);
-  const [isSaving, setIsSaving] = useState(false);
-  const [message, setMessage] = useState("");
+  const [
+    truckersmpId,
+    setTruckersmpId,
+  ] = useState("");
+
+  const [isLoading, setIsLoading] =
+    useState(true);
+
+  const [isSaving, setIsSaving] =
+    useState(false);
+
+  const [message, setMessage] =
+    useState("");
 
   useEffect(() => {
     getSettings()
       .then((settings) => {
         setVtcId(settings.vtcId);
-        setTruckersmpId(settings.truckersmpId);
+        setTruckersmpId(
+          settings.truckersmpId,
+        );
       })
       .catch((error) => {
-        console.error("Failed to load settings:", error);
-        setMessage("Einstellungen konnten nicht geladen werden.");
+        console.error(
+          "Failed to load settings:",
+          error,
+        );
+
+        setMessage(
+          t("settings.messages.loadError"),
+        );
       })
       .finally(() => {
         setIsLoading(false);
       });
-  }, []);
+  }, [t]);
 
-  function handleVtcIdChange(value: string) {
-    setVtcId(value.replace(/[^0-9]/g, ""));
+  function handleVtcIdChange(
+    value: string,
+  ) {
+    setVtcId(
+      value.replace(/[^0-9]/g, ""),
+    );
+
     setMessage("");
   }
 
-  function handleTruckersMpIdChange(value: string) {
-    setTruckersmpId(value.replace(/[^0-9]/g, ""));
+  function handleTruckersMpIdChange(
+    value: string,
+  ) {
+    setTruckersmpId(
+      value.replace(/[^0-9]/g, ""),
+    );
+
     setMessage("");
   }
 
   async function handleSave() {
     if (!vtcId.trim()) {
-      setMessage("Bitte gib eine TruckersMP VTC-ID ein.");
+      setMessage(
+        t("settings.messages.missingVtcId"),
+      );
+
       return;
     }
 
     if (!truckersmpId.trim()) {
-      setMessage("Bitte gib deine TruckersMP-ID ein.");
+      setMessage(
+        t(
+          "settings.messages.missingTruckersmpId",
+        ),
+      );
+
       return;
     }
 
@@ -67,19 +110,30 @@ export function SettingsPage({ onBack }: SettingsPageProps) {
     };
 
     try {
-      const saved = await saveSettings(settings);
+      const saved =
+        await saveSettings(settings);
 
       setVtcId(saved.vtcId);
-      setTruckersmpId(saved.truckersmpId);
 
-      setMessage("Einstellungen wurden gespeichert.");
+      setTruckersmpId(
+        saved.truckersmpId,
+      );
+
+      setMessage(
+        t("settings.messages.saved"),
+      );
     } catch (error) {
-      console.error("Failed to save settings:", error);
+      console.error(
+        "Failed to save settings:",
+        error,
+      );
 
       setMessage(
         typeof error === "string"
           ? error
-          : "Einstellungen konnten nicht gespeichert werden.",
+          : t(
+              "settings.messages.saveError",
+            ),
       );
     } finally {
       setIsSaving(false);
@@ -95,12 +149,18 @@ export function SettingsPage({ onBack }: SettingsPageProps) {
           onClick={onBack}
         >
           <ArrowLeft size={18} />
-          Zurück
+
+          {t("settings.back")}
         </button>
 
         <div>
-          <h2>Einstellungen</h2>
-          <p>Konfiguriere deine RoadWatch-Verbindung.</p>
+          <h2>
+            {t("settings.title")}
+          </h2>
+
+          <p>
+            {t("settings.subtitle")}
+          </p>
         </div>
       </div>
 
@@ -111,14 +171,25 @@ export function SettingsPage({ onBack }: SettingsPageProps) {
           </div>
 
           <div>
-            <h3>TruckersMP</h3>
-            <p>Verbindung zu deiner VTC und deinem TruckersMP-Konto.</p>
+            <h3>
+              {t(
+                "settings.truckersmp.title",
+              )}
+            </h3>
+
+            <p>
+              {t(
+                "settings.truckersmp.description",
+              )}
+            </p>
           </div>
         </div>
 
         <div className="settings-field">
           <label htmlFor="settings-vtc-id">
-            TruckersMP VTC-ID
+            {t(
+              "settings.truckersmp.vtcId",
+            )}
           </label>
 
           <input
@@ -127,20 +198,30 @@ export function SettingsPage({ onBack }: SettingsPageProps) {
             inputMode="numeric"
             value={vtcId}
             onChange={(event) =>
-              handleVtcIdChange(event.target.value)
+              handleVtcIdChange(
+                event.target.value,
+              )
             }
-            placeholder="z. B. 7265"
-            disabled={isLoading || isSaving}
+            placeholder={t(
+              "settings.truckersmp.vtcIdPlaceholder",
+            )}
+            disabled={
+              isLoading || isSaving
+            }
           />
 
           <span>
-            Die ID deiner TruckersMP VTC.
+            {t(
+              "settings.truckersmp.vtcIdHelp",
+            )}
           </span>
         </div>
 
         <div className="settings-field">
           <label htmlFor="settings-truckersmp-id">
-            Meine TruckersMP-ID
+            {t(
+              "settings.truckersmp.myTruckersmpId",
+            )}
           </label>
 
           <input
@@ -149,16 +230,22 @@ export function SettingsPage({ onBack }: SettingsPageProps) {
             inputMode="numeric"
             value={truckersmpId}
             onChange={(event) =>
-              handleTruckersMpIdChange(event.target.value)
+              handleTruckersMpIdChange(
+                event.target.value,
+              )
             }
-            placeholder="z. B. 12345678"
-            disabled={isLoading || isSaving}
+            placeholder={t(
+              "settings.truckersmp.truckersmpIdPlaceholder",
+            )}
+            disabled={
+              isLoading || isSaving
+            }
           />
 
           <span>
-            Deine persönliche TruckersMP-ID. Sie wird später für
-            deine eigene Live-Position und die Entfernungsberechnung
-            verwendet.
+            {t(
+              "settings.truckersmp.truckersmpIdHelp",
+            )}
           </span>
         </div>
       </div>
@@ -170,14 +257,25 @@ export function SettingsPage({ onBack }: SettingsPageProps) {
           </div>
 
           <div>
-            <h3>Allgemein</h3>
-            <p>Allgemeine RoadWatch-Einstellungen.</p>
+            <h3>
+              {t(
+                "settings.general.title",
+              )}
+            </h3>
+
+            <p>
+              {t(
+                "settings.general.description",
+              )}
+            </p>
           </div>
         </div>
 
         <div className="settings-field">
           <label htmlFor="settings-language">
-            Sprache
+            {t(
+              "settings.general.language",
+            )}
           </label>
 
           <select
@@ -188,12 +286,21 @@ export function SettingsPage({ onBack }: SettingsPageProps) {
                 : "en"
             }
             onChange={(event) =>
-              i18n.changeLanguage(event.target.value)
+              i18n.changeLanguage(
+                event.target.value,
+              )
             }
-            disabled={isLoading || isSaving}
+            disabled={
+              isLoading || isSaving
+            }
           >
-            <option value="de">Deutsch</option>
-            <option value="en">English</option>
+            <option value="de">
+              {t("language.de")}
+            </option>
+
+            <option value="en">
+              {t("language.en")}
+            </option>
           </select>
         </div>
       </div>
@@ -203,10 +310,15 @@ export function SettingsPage({ onBack }: SettingsPageProps) {
           type="button"
           className="settings-save-button"
           onClick={handleSave}
-          disabled={isLoading || isSaving}
+          disabled={
+            isLoading || isSaving
+          }
         >
           <Save size={17} />
-          {isSaving ? "Speichern..." : "Speichern"}
+
+          {isSaving
+            ? t("settings.saving")
+            : t("settings.save")}
         </button>
 
         {message && (

@@ -6,13 +6,59 @@
     "members": "VTC Members",
     "online": "Online",
     "offline": "Offline",
-    "all": "All"
+    "all": "All",
+    "currentPlayer": "My Driver",
+    "backend": "Rust",
+    "live": "Live",
+    "refreshing": "Refreshing",
+    "updatingNow": "Updating data...",
+    "refresh": "Refresh",
+    "refreshNow": "Refresh now",
+    "notUpdatedYet": "Not updated yet",
+    "updatedJustNow": "updated just now",
+    "updatedSecondsAgo": "updated {{count}} seconds ago",
+    "updatedOneMinuteAgo": "updated 1 minute ago",
+    "updatedMinutesAgo": "updated {{count}} minutes ago",
+    "updatedOneHourAgo": "updated 1 hour ago",
+    "updatedHoursAgo": "updated {{count}} hours ago",
+    "membersTitle": "VTC Members",
+    "loadingPlayers": "Loading player data...",
+    "playerUpdateError": "Player data could not be updated."
   },
   "search": {
     "placeholder": "Search players..."
   },
   "players": {
     "empty": "No players found."
+  },
+  "settings": {
+    "back": "Back",
+    "title": "Settings",
+    "subtitle": "Configure your RoadWatch connection.",
+    "truckersmp": {
+      "title": "TruckersMP",
+      "description": "Connection to your VTC and TruckersMP account.",
+      "vtcId": "TruckersMP VTC ID",
+      "vtcIdPlaceholder": "e.g. 7265",
+      "vtcIdHelp": "The ID of your TruckersMP VTC.",
+      "myTruckersmpId": "My TruckersMP ID",
+      "truckersmpIdPlaceholder": "e.g. 12345678",
+      "truckersmpIdHelp": "Your personal TruckersMP ID. It is used for your own live position and distance calculations."
+    },
+    "general": {
+      "title": "General",
+      "description": "General RoadWatch settings.",
+      "language": "Language"
+    },
+    "save": "Save",
+    "saving": "Saving...",
+    "messages": {
+      "loadError": "Settings could not be loaded.",
+      "missingVtcId": "Please enter a TruckersMP VTC ID.",
+      "missingTruckersmpId": "Please enter your TruckersMP ID.",
+      "saved": "Settings have been saved.",
+      "saveError": "Settings could not be saved."
+    }
   },
   "language": {
     "de": "Deutsch",
