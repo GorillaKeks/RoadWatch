@@ -1,0 +1,21 @@
+{
+  "app": {
+    "name": "ROADWATCH"
+  },
+  "dashboard": {
+    "members": "VTC Members",
+    "online": "Online",
+    "offline": "Offline",
+    "all": "All"
+  },
+  "search": {
+    "placeholder": "Search players..."
+  },
+  "players": {
+    "empty": "No players found."
+  },
+  "language": {
+    "de": "Deutsch",
+    "en": "English"
+  }
+}

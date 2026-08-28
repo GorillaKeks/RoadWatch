@@ -1,0 +1,2620 @@
+[
+  {
+    "name": "Aberdeen",
+    "region": "",
+    "country": "United Kingdom",
+    "x": -39596.79296875,
+    "y": -56040.46875
+  },
+  {
+    "name": "Amsterdam",
+    "region": "",
+    "country": "Netherlands",
+    "x": -19173.955078125,
+    "y": -11370.5283203125
+  },
+  {
+    "name": "Antwerp",
+    "region": "",
+    "country": "Belgium",
+    "x": -22264.978515625,
+    "y": -6196.998046875
+  },
+  {
+    "name": "Berlin",
+    "region": "",
+    "country": "Germany",
+    "x": 8897.591796875,
+    "y": -11127.2939453125
+  },
+  {
+    "name": "Bern",
+    "region": "",
+    "country": "Switzerland",
+    "x": -13382.3720703125,
+    "y": 19870.6328125
+  },
+  {
+    "name": "Birmingham",
+    "region": "",
+    "country": "United Kingdom",
+    "x": -46451.25,
+    "y": -20943.125
+  },
+  {
+    "name": "Bratislava",
+    "region": "",
+    "country": "Slovakia",
+    "x": 24023.171875,
+    "y": 14410.89453125
+  },
+  {
+    "name": "Bremen",
+    "region": "",
+    "country": "Germany",
+    "x": -6197.8662109375,
+    "y": -15066.6328125
+  },
+  {
+    "name": "Brno",
+    "region": "",
+    "country": "Czech",
+    "x": 21873.71484375,
+    "y": 8794.82421875
+  },
+  {
+    "name": "Brussels",
+    "region": "",
+    "country": "Belgium",
+    "x": -23504.396484375,
+    "y": -3583.599609375
+  },
+  {
+    "name": "Calais",
+    "region": "",
+    "country": "France",
+    "x": -31140.52734375,
+    "y": -5505.765625
+  },
+  {
+    "name": "Cambridge",
+    "region": "",
+    "country": "United Kingdom",
+    "x": -37322.8125,
+    "y": -16539.5234375
+  },
+  {
+    "name": "Cardiff",
+    "region": "",
+    "country": "United Kingdom",
+    "x": -54555.40234375,
+    "y": -15118.5703125
+  },
+  {
+    "name": "Carlisle",
+    "region": "",
+    "country": "United Kingdom",
+    "x": -46439.30078125,
+    "y": -40093.6015625
+  },
+  {
+    "name": "Dijon",
+    "region": "",
+    "country": "France",
+    "x": -22820.15234375,
+    "y": 16285.375
+  },
+  {
+    "name": "Dortmund",
+    "region": "",
+    "country": "Germany",
+    "x": -12417.9462890625,
+    "y": -7868.4208984375
+  },
+  {
+    "name": "Dover",
+    "region": "",
+    "country": "United Kingdom",
+    "x": -33772.07421875,
+    "y": -8554.48046875
+  },
+  {
+    "name": "Dresden",
+    "region": "",
+    "country": "Germany",
+    "x": 10684.34765625,
+    "y": -2878.48779296875
+  },
+  {
+    "name": "Duisburg",
+    "region": "",
+    "country": "Germany",
+    "x": -14784.341796875,
+    "y": -7334.07958984375
+  },
+  {
+    "name": "Düsseldorf",
+    "region": "",
+    "country": "Germany",
+    "x": -14473.10546875,
+    "y": -5635.482421875
+  },
+  {
+    "name": "Edinburgh",
+    "region": "",
+    "country": "United Kingdom",
+    "x": -45400.8671875,
+    "y": -47889.796875
+  },
+  {
+    "name": "Eindhoven",
+    "region": "",
+    "country": "Netherlands",
+    "x": -18235.404296875,
+    "y": -7617.59326171875
+  },
+  {
+    "name": "Erfurt",
+    "region": "",
+    "country": "Germany",
+    "x": 1740.545654296875,
+    "y": -3217.035400390625
+  },
+  {
+    "name": "Felixstowe",
+    "region": "",
+    "country": "United Kingdom",
+    "x": -31964.68359375,
+    "y": -14857.34375
+  },
+  {
+    "name": "Frankfurt am Main",
+    "region": "",
+    "country": "Germany",
+    "x": -6983.73828125,
+    "y": 1597.046875
+  },
+  {
+    "name": "Geneva",
+    "region": "",
+    "country": "Switzerland",
+    "x": -18506.8125,
+    "y": 22793.18359375
+  },
+  {
+    "name": "Glasgow",
+    "region": "",
+    "country": "United Kingdom",
+    "x": -51134.82421875,
+    "y": -49241.74609375
+  },
+  {
+    "name": "Graz",
+    "region": "",
+    "country": "Austria",
+    "x": 18210.990234375,
+    "y": 19941.69921875
+  },
+  {
+    "name": "Grimsby",
+    "region": "",
+    "country": "United Kingdom",
+    "x": -36868.0234375,
+    "y": -27345.30859375
+  },
+  {
+    "name": "Groningen",
+    "region": "",
+    "country": "Netherlands",
+    "x": -13462.5234375,
+    "y": -16463.744140625
+  },
+  {
+    "name": "Hamburg",
+    "region": "",
+    "country": "Germany",
+    "x": -2996.370361328125,
+    "y": -17401.609375
+  },
+  {
+    "name": "Hanover",
+    "region": "",
+    "country": "Germany",
+    "x": -3001.80322265625,
+    "y": -10199.2978515625
+  },
+  {
+    "name": "Innsbruck",
+    "region": "",
+    "country": "Austria",
+    "x": 1710.828125,
+    "y": 19182.4296875
+  },
+  {
+    "name": "Kassel",
+    "region": "",
+    "country": "Germany",
+    "x": -4321.21337890625,
+    "y": -4569.76611328125
+  },
+  {
+    "name": "Kiel",
+    "region": "",
+    "country": "Germany",
+    "x": 278.46368408203125,
+    "y": -22703.6953125
+  },
+  {
+    "name": "Klagenfurt am Wörthersee",
+    "region": "",
+    "country": "Austria",
+    "x": 13296.98046875,
+    "y": 22755.765625
+  },
+  {
+    "name": "Cologne",
+    "region": "",
+    "country": "Germany",
+    "x": -13641.1171875,
+    "y": -3576.64404296875
+  },
+  {
+    "name": "Leipzig",
+    "region": "",
+    "country": "Germany",
+    "x": 6723.392578125,
+    "y": -3863.093994140625
+  },
+  {
+    "name": "Liège",
+    "region": "",
+    "country": "Belgium",
+    "x": -17623.220703125,
+    "y": -1475.5067138671875
+  },
+  {
+    "name": "Lille",
+    "region": "",
+    "country": "France",
+    "x": -26839.515625,
+    "y": -2930.40625
+  },
+  {
+    "name": "Linz",
+    "region": "",
+    "country": "Austria",
+    "x": 12886.265625,
+    "y": 13343.45703125
+  },
+  {
+    "name": "Liverpool",
+    "region": "",
+    "country": "United Kingdom",
+    "x": -49621.859375,
+    "y": -29861.95703125
+  },
+  {
+    "name": "London",
+    "region": "",
+    "country": "United Kingdom",
+    "x": -40196.9921875,
+    "y": -12259.33984375
+  },
+  {
+    "name": "Luxembourg",
+    "region": "",
+    "country": "Luxembourg",
+    "x": -17148.853515625,
+    "y": 2687.388916015625
+  },
+  {
+    "name": "Lyon",
+    "region": "",
+    "country": "France",
+    "x": -24477.953125,
+    "y": 24957.90234375
+  },
+  {
+    "name": "Magdeburg",
+    "region": "",
+    "country": "Germany",
+    "x": 3740.2197265625,
+    "y": -8890.39453125
+  },
+  {
+    "name": "Manchester",
+    "region": "",
+    "country": "United Kingdom",
+    "x": -46298.77734375,
+    "y": -28585.14453125
+  },
+  {
+    "name": "Mannheim",
+    "region": "",
+    "country": "Germany",
+    "x": -8619.1767578125,
+    "y": 5146.6953125
+  },
+  {
+    "name": "Metz",
+    "region": "",
+    "country": "France",
+    "x": -16594.625,
+    "y": 7093.58984375
+  },
+  {
+    "name": "Milan",
+    "region": "",
+    "country": "Italy",
+    "x": -7916.5703125,
+    "y": 28693.5625
+  },
+  {
+    "name": "Munich",
+    "region": "",
+    "country": "Germany",
+    "x": 2474.1396484375,
+    "y": 13403.14453125
+  },
+  {
+    "name": "Newcastle upon Tyne",
+    "region": "",
+    "country": "United Kingdom",
+    "x": -40128.16796875,
+    "y": -39307.84375
+  },
+  {
+    "name": "Nuremberg",
+    "region": "",
+    "country": "Germany",
+    "x": 853.4857177734375,
+    "y": 5416.13330078125
+  },
+  {
+    "name": "Osnabrück",
+    "region": "",
+    "country": "Germany",
+    "x": -8682.939453125,
+    "y": -10493.7001953125
+  },
+  {
+    "name": "Paris",
+    "region": "",
+    "country": "France",
+    "x": -31427.47265625,
+    "y": 6366.07421875
+  },
+  {
+    "name": "Plymouth",
+    "region": "",
+    "country": "United Kingdom",
+    "x": -60566.5,
+    "y": -8502.4453125
+  },
+  {
+    "name": "Poznań",
+    "region": "",
+    "country": "Poland",
+    "x": 22313.27734375,
+    "y": -9682.32421875
+  },
+  {
+    "name": "Prague",
+    "region": "",
+    "country": "Czech",
+    "x": 13699.58203125,
+    "y": 3458.84765625
+  },
+  {
+    "name": "Reims",
+    "region": "",
+    "country": "France",
+    "x": -24104.890625,
+    "y": 5610.015625
+  },
+  {
+    "name": "Rostock",
+    "region": "",
+    "country": "Germany",
+    "x": 5624.89990234375,
+    "y": -19578.6484375
+  },
+  {
+    "name": "Rotterdam",
+    "region": "",
+    "country": "Netherlands",
+    "x": -19737.646484375,
+    "y": -10086.517578125
+  },
+  {
+    "name": "Salzburg",
+    "region": "",
+    "country": "Austria",
+    "x": 8519.49609375,
+    "y": 15274.625
+  },
+  {
+    "name": "Sheffield",
+    "region": "",
+    "country": "United Kingdom",
+    "x": -43088.87890625,
+    "y": -27107.69140625
+  },
+  {
+    "name": "Southampton",
+    "region": "",
+    "country": "United Kingdom",
+    "x": -46838.8671875,
+    "y": -7893.37109375
+  },
+  {
+    "name": "Strasbourg",
+    "region": "",
+    "country": "France",
+    "x": -11387.0703125,
+    "y": 10537.265625
+  },
+  {
+    "name": "Stuttgart",
+    "region": "",
+    "country": "Germany",
+    "x": -5746.28759765625,
+    "y": 9265.6689453125
+  },
+  {
+    "name": "Swansea",
+    "region": "",
+    "country": "United Kingdom",
+    "x": -57646.12890625,
+    "y": -17652.0703125
+  },
+  {
+    "name": "Szczecin",
+    "region": "",
+    "country": "Poland",
+    "x": 14502.53515625,
+    "y": -15569.890625
+  },
+  {
+    "name": "Turin",
+    "region": "",
+    "country": "Italy",
+    "x": -13222.375,
+    "y": 30211.8828125
+  },
+  {
+    "name": "Travemünde",
+    "region": "",
+    "country": "Germany",
+    "x": 2159.0009765625,
+    "y": -20008.455078125
+  },
+  {
+    "name": "Trieste",
+    "region": "",
+    "country": "Italy",
+    "x": 10154.060546875,
+    "y": 27184.23046875
+  },
+  {
+    "name": "Venice",
+    "region": "",
+    "country": "Italy",
+    "x": 4689.7578125,
+    "y": 29658.8046875
+  },
+  {
+    "name": "Verona",
+    "region": "",
+    "country": "Italy",
+    "x": -461.015625,
+    "y": 28983.19921875
+  },
+  {
+    "name": "Vienna",
+    "region": "",
+    "country": "Austria",
+    "x": 19939.6328125,
+    "y": 13465.90625
+  },
+  {
+    "name": "Wrocław",
+    "region": "",
+    "country": "Poland",
+    "x": 22802.7734375,
+    "y": -3021.10546875
+  },
+  {
+    "name": "Zürich",
+    "region": "",
+    "country": "Switzerland",
+    "x": -9438.7900390625,
+    "y": 16747.23046875
+  },
+  {
+    "name": "Bucharest",
+    "region": "",
+    "country": "Romania",
+    "x": 60720.8515625,
+    "y": 31233.5
+  },
+  {
+    "name": "Iași",
+    "region": "",
+    "country": "Romania",
+    "x": 63246.29296875,
+    "y": 13443.7421875
+  },
+  {
+    "name": "Brașov",
+    "region": "",
+    "country": "Romania",
+    "x": 58002.234375,
+    "y": 23332.72265625
+  },
+  {
+    "name": "Târgu Mureș",
+    "region": "",
+    "country": "Romania",
+    "x": 52709.5546875,
+    "y": 19237.07421875
+  },
+  {
+    "name": "Cluj-Napoca",
+    "region": "",
+    "country": "Romania",
+    "x": 49028.20703125,
+    "y": 17957.05078125
+  },
+  {
+    "name": "Timișoara",
+    "region": "",
+    "country": "Romania",
+    "x": 40552.21484375,
+    "y": 26320.01171875
+  },
+  {
+    "name": "Craiova",
+    "region": "",
+    "country": "Romania",
+    "x": 50918.41796875,
+    "y": 32508.390625
+  },
+  {
+    "name": "Pitești",
+    "region": "",
+    "country": "Romania",
+    "x": 55747.4140625,
+    "y": 29392.37109375
+  },
+  {
+    "name": "Galați",
+    "region": "",
+    "country": "Romania",
+    "x": 66046.03125,
+    "y": 23352.875
+  },
+  {
+    "name": "Constanța",
+    "region": "",
+    "country": "Romania",
+    "x": 71381.5390625,
+    "y": 30500.734375
+  },
+  {
+    "name": "Hunedoara",
+    "region": "",
+    "country": "Romania",
+    "x": 48141.734375,
+    "y": 25594.70703125
+  },
+  {
+    "name": "Reșița",
+    "region": "",
+    "country": "Romania",
+    "x": 43090.234375,
+    "y": 28534.45703125
+  },
+  {
+    "name": "Călărași",
+    "region": "",
+    "country": "Romania",
+    "x": 65124.5,
+    "y": 30737.71875
+  },
+  {
+    "name": "Cernavodă",
+    "region": "",
+    "country": "Romania",
+    "x": 68929.359375,
+    "y": 29395.24609375
+  },
+  {
+    "name": "Mangalia",
+    "region": "",
+    "country": "Romania",
+    "x": 71227.59375,
+    "y": 32960.7265625
+  },
+  {
+    "name": "Bacău",
+    "region": "",
+    "country": "Romania",
+    "x": 61887.29296875,
+    "y": 18223.83984375
+  },
+  {
+    "name": "Plovdiv",
+    "region": "",
+    "country": "Bulgaria",
+    "x": 56984.66796875,
+    "y": 44949.29296875
+  },
+  {
+    "name": "Varna",
+    "region": "",
+    "country": "Bulgaria",
+    "x": 69251.7109375,
+    "y": 35442.10546875
+  },
+  {
+    "name": "Ruse",
+    "region": "",
+    "country": "Bulgaria",
+    "x": 60953.87109375,
+    "y": 34599.6328125
+  },
+  {
+    "name": "Burgas",
+    "region": "",
+    "country": "Bulgaria",
+    "x": 66797.046875,
+    "y": 39860.54296875
+  },
+  {
+    "name": "Pleven",
+    "region": "",
+    "country": "Bulgaria",
+    "x": 56844.45703125,
+    "y": 37037.42578125
+  },
+  {
+    "name": "Veliko Tarnovo",
+    "region": "",
+    "country": "Bulgaria",
+    "x": 60463.2578125,
+    "y": 38164.328125
+  },
+  {
+    "name": "Sofia",
+    "region": "",
+    "country": "Bulgaria",
+    "x": 50404.66015625,
+    "y": 41995.51953125
+  },
+  {
+    "name": "Pernik",
+    "region": "",
+    "country": "Bulgaria",
+    "x": 47848.12109375,
+    "y": 44712.828125
+  },
+  {
+    "name": "Kozloduy",
+    "region": "",
+    "country": "Bulgaria",
+    "x": 52508.02734375,
+    "y": 36077.16796875
+  },
+  {
+    "name": "Pirdop",
+    "region": "",
+    "country": "Bulgaria",
+    "x": 55687.73828125,
+    "y": 42040.9765625
+  },
+  {
+    "name": "Karlovo",
+    "region": "",
+    "country": "Bulgaria",
+    "x": 57506.26171875,
+    "y": 41637.60546875
+  },
+  {
+    "name": "İstanbul",
+    "region": "",
+    "country": "Turkey",
+    "x": 73653.375,
+    "y": 45623.828125
+  },
+  {
+    "name": "Edirne",
+    "region": "",
+    "country": "Turkey",
+    "x": 64295.91796875,
+    "y": 46409.04296875
+  },
+  {
+    "name": "Tekirdağ",
+    "region": "",
+    "country": "Turkey",
+    "x": 68190.421875,
+    "y": 48967.66796875
+  },
+  {
+    "name": "Koper",
+    "region": "",
+    "country": "Slovenia",
+    "x": 10733.78125,
+    "y": 28959.6328125
+  },
+  {
+    "name": "Ljubljana",
+    "region": "",
+    "country": "Slovenia",
+    "x": 14797.97265625,
+    "y": 25545.0859375
+  },
+  {
+    "name": "Maribor",
+    "region": "",
+    "country": "Slovenia",
+    "x": 18074.46484375,
+    "y": 22717.3359375
+  },
+  {
+    "name": "Novo Mesto",
+    "region": "",
+    "country": "Slovenia",
+    "x": 16101.6845703125,
+    "y": 27209.01953125
+  },
+  {
+    "name": "Osijek",
+    "region": "",
+    "country": "Croatia",
+    "x": 31000.478515625,
+    "y": 28372.947265625
+  },
+  {
+    "name": "Rijeka",
+    "region": "",
+    "country": "Croatia",
+    "x": 13866.14453125,
+    "y": 29916.13671875
+  },
+  {
+    "name": "Split",
+    "region": "",
+    "country": "Croatia",
+    "x": 21267.37109375,
+    "y": 39421.25390625
+  },
+  {
+    "name": "Zadar",
+    "region": "",
+    "country": "Croatia",
+    "x": 16790.40625,
+    "y": 36096.53125
+  },
+  {
+    "name": "Zagreb",
+    "region": "",
+    "country": "Croatia",
+    "x": 21030.572265625,
+    "y": 26455.01953125
+  },
+  {
+    "name": "Banja Luka",
+    "region": "",
+    "country": "Bosnia and Herzegovina",
+    "x": 25242.04296875,
+    "y": 32435.609375
+  },
+  {
+    "name": "Bihać",
+    "region": "",
+    "country": "Bosnia and Herzegovina",
+    "x": 20200.419921875,
+    "y": 32348.880859375
+  },
+  {
+    "name": "Karakaj",
+    "region": "",
+    "country": "Bosnia and Herzegovina",
+    "x": 33799.265625,
+    "y": 33203.37109375
+  },
+  {
+    "name": "Mostar",
+    "region": "",
+    "country": "Bosnia and Herzegovina",
+    "x": 27775.515625,
+    "y": 40503.63671875
+  },
+  {
+    "name": "Sarajevo",
+    "region": "",
+    "country": "Bosnia and Herzegovina",
+    "x": 29927.28125,
+    "y": 37528.94921875
+  },
+  {
+    "name": "Tuzla",
+    "region": "",
+    "country": "Bosnia and Herzegovina",
+    "x": 31410.63671875,
+    "y": 33603.36328125
+  },
+  {
+    "name": "Zenica",
+    "region": "",
+    "country": "Bosnia and Herzegovina",
+    "x": 28225.234375,
+    "y": 35576.40234375
+  },
+  {
+    "name": "Belgrade",
+    "region": "",
+    "country": "Serbia",
+    "x": 38497.74609375,
+    "y": 31433.197265625
+  },
+  {
+    "name": "Kragujevac",
+    "region": "",
+    "country": "Serbia",
+    "x": 39881.02734375,
+    "y": 36012.5078125
+  },
+  {
+    "name": "Niš",
+    "region": "",
+    "country": "Serbia",
+    "x": 44790.0234375,
+    "y": 39326.828125
+  },
+  {
+    "name": "Novi Sad",
+    "region": "",
+    "country": "Serbia",
+    "x": 35308.8984375,
+    "y": 29357.498046875
+  },
+  {
+    "name": "Pristina",
+    "region": "",
+    "country": "Kosovo",
+    "x": 41761.44140625,
+    "y": 42808.7890625
+  },
+  {
+    "name": "Bijelo Polje",
+    "region": "",
+    "country": "Montenegro",
+    "x": 36073.5859375,
+    "y": 41721.84765625
+  },
+  {
+    "name": "Nikšić",
+    "region": "",
+    "country": "Montenegro",
+    "x": 32904.23046875,
+    "y": 42799.1953125
+  },
+  {
+    "name": "Podgorica",
+    "region": "",
+    "country": "Montenegro",
+    "x": 33036.56640625,
+    "y": 44220.69140625
+  },
+  {
+    "name": "Durrës",
+    "region": "",
+    "country": "Albania",
+    "x": 35460.5625,
+    "y": 51403.81640625
+  },
+  {
+    "name": "Fier",
+    "region": "",
+    "country": "Albania",
+    "x": 37012.01171875,
+    "y": 53891.4453125
+  },
+  {
+    "name": "Tirana",
+    "region": "",
+    "country": "Albania",
+    "x": 37720.40625,
+    "y": 50471.625
+  },
+  {
+    "name": "Vlorë",
+    "region": "",
+    "country": "Albania",
+    "x": 35951.03125,
+    "y": 56421.03125
+  },
+  {
+    "name": "Bitola",
+    "region": "",
+    "country": "Macedonia",
+    "x": 44568.8203125,
+    "y": 52364.5078125
+  },
+  {
+    "name": "Skopje",
+    "region": "",
+    "country": "Macedonia",
+    "x": 42714.03515625,
+    "y": 47345.203125
+  },
+  {
+    "name": "Kaliningrad",
+    "region": "",
+    "country": "Russia",
+    "x": 34315.05078125,
+    "y": -23251.50390625
+  },
+  {
+    "name": "Kaunas",
+    "region": "",
+    "country": "Lithuania",
+    "x": 44413.8828125,
+    "y": -26267.85546875
+  },
+  {
+    "name": "Klaipėda",
+    "region": "",
+    "country": "Lithuania",
+    "x": 35592.6875,
+    "y": -29939.6875
+  },
+  {
+    "name": "Šiauliai",
+    "region": "",
+    "country": "Lithuania",
+    "x": 42563.6328125,
+    "y": -31373.94140625
+  },
+  {
+    "name": "Vilnius",
+    "region": "",
+    "country": "Lithuania",
+    "x": 49462.4375,
+    "y": -26077.646484375
+  },
+  {
+    "name": "Panevėžys",
+    "region": "",
+    "country": "Lithuania",
+    "x": 45652.203125,
+    "y": -30282.9375
+  },
+  {
+    "name": "Utena",
+    "region": "",
+    "country": "Lithuania",
+    "x": 50128.05078125,
+    "y": -30060.546875
+  },
+  {
+    "name": "Liepāja",
+    "region": "",
+    "country": "Latvia",
+    "x": 34204.3671875,
+    "y": -34145.0625
+  },
+  {
+    "name": "Ventspils",
+    "region": "",
+    "country": "Latvia",
+    "x": 35879.62109375,
+    "y": -39182.1328125
+  },
+  {
+    "name": "Daugavpils",
+    "region": "",
+    "country": "Latvia",
+    "x": 52325.27734375,
+    "y": -32925.78125
+  },
+  {
+    "name": "Riga",
+    "region": "",
+    "country": "Latvia",
+    "x": 43827.875,
+    "y": -37984.80859375
+  },
+  {
+    "name": "Valmiera",
+    "region": "",
+    "country": "Latvia",
+    "x": 47622.9296875,
+    "y": -41103.87109375
+  },
+  {
+    "name": "Pärnu",
+    "region": "",
+    "country": "Estonia",
+    "x": 44076.64453125,
+    "y": -45757.828125
+  },
+  {
+    "name": "Tartu",
+    "region": "",
+    "country": "Estonia",
+    "x": 50686.30078125,
+    "y": -46878.09375
+  },
+  {
+    "name": "Paldiski",
+    "region": "",
+    "country": "Estonia",
+    "x": 42144.875,
+    "y": -50332.07421875
+  },
+  {
+    "name": "Tallinn",
+    "region": "",
+    "country": "Estonia",
+    "x": 43213.36328125,
+    "y": -51613.75390625
+  },
+  {
+    "name": "Narva",
+    "region": "",
+    "country": "Estonia",
+    "x": 53982.03515625,
+    "y": -52882.44140625
+  },
+  {
+    "name": "Pskov",
+    "region": "",
+    "country": "Russia",
+    "x": 55868.19921875,
+    "y": -44822.4921875
+  },
+  {
+    "name": "Luga",
+    "region": "",
+    "country": "Russia",
+    "x": 59346.328125,
+    "y": -50665.29296875
+  },
+  {
+    "name": "Saint Petersburg",
+    "region": "",
+    "country": "Russia",
+    "x": 59623.6953125,
+    "y": -57210.7734375
+  },
+  {
+    "name": "Vyborg",
+    "region": "",
+    "country": "Russia",
+    "x": 53965.140625,
+    "y": -60641.93359375
+  },
+  {
+    "name": "Kotka",
+    "region": "",
+    "country": "Finland",
+    "x": 49619.9296875,
+    "y": -58615.7890625
+  },
+  {
+    "name": "Kouvola",
+    "region": "",
+    "country": "Finland",
+    "x": 48376.125,
+    "y": -60829.07421875
+  },
+  {
+    "name": "Lahti",
+    "region": "",
+    "country": "Finland",
+    "x": 44942.08984375,
+    "y": -61177.14453125
+  },
+  {
+    "name": "Helsinki",
+    "region": "",
+    "country": "Finland",
+    "x": 44470.2265625,
+    "y": -56161.6328125
+  },
+  {
+    "name": "Turku",
+    "region": "",
+    "country": "Finland",
+    "x": 36022.71875,
+    "y": -56376.1484375
+  },
+  {
+    "name": "Naantali",
+    "region": "",
+    "country": "Finland",
+    "x": 34710.0703125,
+    "y": -56782.5234375
+  },
+  {
+    "name": "Tampere",
+    "region": "",
+    "country": "Finland",
+    "x": 40138.72265625,
+    "y": -62610.8671875
+  },
+  {
+    "name": "Pori",
+    "region": "",
+    "country": "Finland",
+    "x": 34762.2109375,
+    "y": -61827.7578125
+  },
+  {
+    "name": "Rēzekne",
+    "region": "",
+    "country": "Latvia",
+    "x": 54948.30859375,
+    "y": -36100.7421875
+  },
+  {
+    "name": "Kunda",
+    "region": "",
+    "country": "Estonia",
+    "x": 49435.1640625,
+    "y": -52624.80859375
+  },
+  {
+    "name": "Mažeikiai",
+    "region": "",
+    "country": "Lithuania",
+    "x": 39184.296875,
+    "y": -33079.75390625
+  },
+  {
+    "name": "Olkiluoto",
+    "region": "",
+    "country": "Finland",
+    "x": 34005.13671875,
+    "y": -60278.27734375
+  },
+  {
+    "name": "Loviisa",
+    "region": "",
+    "country": "Finland",
+    "x": 47567.28515625,
+    "y": -57357.92578125
+  },
+  {
+    "name": "Sosnovy Bor",
+    "region": "",
+    "country": "Russia",
+    "x": 54699.01953125,
+    "y": -54784.6171875
+  },
+  {
+    "name": "Białystok",
+    "region": "",
+    "country": "Poland",
+    "x": 43598.26953125,
+    "y": -15603.51953125
+  },
+  {
+    "name": "Budapest",
+    "region": "",
+    "country": "Hungary",
+    "x": 31817.6953125,
+    "y": 17362.59765625
+  },
+  {
+    "name": "Banská Bystrica",
+    "region": "",
+    "country": "Slovakia",
+    "x": 32257.45703125,
+    "y": 10360.3515625
+  },
+  {
+    "name": "Debrecen",
+    "region": "",
+    "country": "Hungary",
+    "x": 41291.453125,
+    "y": 16863.58203125
+  },
+  {
+    "name": "Gdańsk",
+    "region": "",
+    "country": "Poland",
+    "x": 27642.97265625,
+    "y": -21539.6640625
+  },
+  {
+    "name": "Katowice",
+    "region": "",
+    "country": "Poland",
+    "x": 30278.66015625,
+    "y": 1988.703125
+  },
+  {
+    "name": "Košice",
+    "region": "",
+    "country": "Slovakia",
+    "x": 39343.79296875,
+    "y": 9974.2578125
+  },
+  {
+    "name": "Kraków",
+    "region": "",
+    "country": "Poland",
+    "x": 33970.125,
+    "y": 2757.55078125
+  },
+  {
+    "name": "Łódź",
+    "region": "",
+    "country": "Poland",
+    "x": 31264.328125,
+    "y": -6664.04296875
+  },
+  {
+    "name": "Lublin",
+    "region": "",
+    "country": "Poland",
+    "x": 42744.0703125,
+    "y": -4625.0859375
+  },
+  {
+    "name": "Olsztyn",
+    "region": "",
+    "country": "Poland",
+    "x": 34258.47265625,
+    "y": -18406.06640625
+  },
+  {
+    "name": "Ostrava",
+    "region": "",
+    "country": "Czech",
+    "x": 27831.17578125,
+    "y": 4724.74853515625
+  },
+  {
+    "name": "Szeged",
+    "region": "",
+    "country": "Hungary",
+    "x": 36318.09375,
+    "y": 23928.07421875
+  },
+  {
+    "name": "Warsaw",
+    "region": "",
+    "country": "Poland",
+    "x": 36644.7890625,
+    "y": -10355.9609375
+  },
+  {
+    "name": "Pécs",
+    "region": "",
+    "country": "Hungary",
+    "x": 28439.8046875,
+    "y": 25941.5234375
+  },
+  {
+    "name": "Winsen",
+    "region": "",
+    "country": "Germany",
+    "x": 863.636962890625,
+    "y": -15443.0087890625
+  },
+  {
+    "name": "Bordeaux",
+    "region": "",
+    "country": "France",
+    "x": -46188.6875,
+    "y": 27204.26953125
+  },
+  {
+    "name": "Clermont-Ferrand",
+    "region": "",
+    "country": "France",
+    "x": -31047.57421875,
+    "y": 24228.3125
+  },
+  {
+    "name": "La Rochelle",
+    "region": "",
+    "country": "France",
+    "x": -46580.87109375,
+    "y": 19507.421875
+  },
+  {
+    "name": "Le Havre",
+    "region": "",
+    "country": "France",
+    "x": -39044.29296875,
+    "y": 845.359375
+  },
+  {
+    "name": "Le Mans",
+    "region": "",
+    "country": "France",
+    "x": -40249.86328125,
+    "y": 9198.30859375
+  },
+  {
+    "name": "Limoges",
+    "region": "",
+    "country": "France",
+    "x": -37817.40234375,
+    "y": 23211.85546875
+  },
+  {
+    "name": "Marseille",
+    "region": "",
+    "country": "France",
+    "x": -24222.53125,
+    "y": 38440.66796875
+  },
+  {
+    "name": "Montpellier",
+    "region": "",
+    "country": "France",
+    "x": -30502.48828125,
+    "y": 35532.4921875
+  },
+  {
+    "name": "Nantes",
+    "region": "",
+    "country": "France",
+    "x": -47221.07421875,
+    "y": 13091.921875
+  },
+  {
+    "name": "Nice",
+    "region": "",
+    "country": "France",
+    "x": -15870.4921875,
+    "y": 37786.0390625
+  },
+  {
+    "name": "Rennes",
+    "region": "",
+    "country": "France",
+    "x": -47239.94921875,
+    "y": 7144.484375
+  },
+  {
+    "name": "Toulouse",
+    "region": "",
+    "country": "France",
+    "x": -40063.3828125,
+    "y": 34895.4609375
+  },
+  {
+    "name": "Brest",
+    "region": "",
+    "country": "France",
+    "x": -57421.5390625,
+    "y": 3199.1796875
+  },
+  {
+    "name": "Roscoff",
+    "region": "",
+    "country": "France",
+    "x": -53997.98828125,
+    "y": 2795.2890625
+  },
+  {
+    "name": "Bourges",
+    "region": "",
+    "country": "France",
+    "x": -32141.921875,
+    "y": 16080.375
+  },
+  {
+    "name": "Civaux",
+    "region": "",
+    "country": "France",
+    "x": -39279.84765625,
+    "y": 17996.83984375
+  },
+  {
+    "name": "Saint-Laurent",
+    "region": "",
+    "country": "France",
+    "x": -35899.75,
+    "y": 13234.09375
+  },
+  {
+    "name": "Paluel",
+    "region": "",
+    "country": "France",
+    "x": -33908.2421875,
+    "y": -95.22265625
+  },
+  {
+    "name": "Golfech",
+    "region": "",
+    "country": "France",
+    "x": -40845.515625,
+    "y": 31102.4296875
+  },
+  {
+    "name": "Saint-Alban-du-Rhône",
+    "region": "",
+    "country": "France",
+    "x": -26203.7109375,
+    "y": 28716.21875
+  },
+  {
+    "name": "Ajaccio",
+    "region": "",
+    "country": "France",
+    "x": -10531.59765625,
+    "y": 47850.765625
+  },
+  {
+    "name": "Bastia",
+    "region": "",
+    "country": "France",
+    "x": -7539.671875,
+    "y": 43566.21875
+  },
+  {
+    "name": "Calvi",
+    "region": "",
+    "country": "France",
+    "x": -10635.96875,
+    "y": 45497.3984375
+  },
+  {
+    "name": "Porto-Vecchio",
+    "region": "",
+    "country": "France",
+    "x": -8126.66796875,
+    "y": 50690.046875
+  },
+  {
+    "name": "L'Île-Rousse",
+    "region": "",
+    "country": "France",
+    "x": -9164.8359375,
+    "y": 44256.19921875
+  },
+  {
+    "name": "Bonifacio",
+    "region": "",
+    "country": "France",
+    "x": -8719.89453125,
+    "y": 51934.81640625
+  },
+  {
+    "name": "Bayonne",
+    "region": "",
+    "country": "France",
+    "x": -52332.05078125,
+    "y": 33317.2578125
+  },
+  {
+    "name": "Lacq",
+    "region": "",
+    "country": "France",
+    "x": -49503.62109375,
+    "y": 35706.4609375
+  },
+  {
+    "name": "Argostoli",
+    "region": "",
+    "country": "Greece",
+    "x": 41222.78125,
+    "y": 71237.4765625
+  },
+  {
+    "name": "Athens",
+    "region": "",
+    "country": "Greece",
+    "x": 54945.9765625,
+    "y": 68029.59375
+  },
+  {
+    "name": "Chania",
+    "region": "",
+    "country": "Greece",
+    "x": 57171.4921875,
+    "y": 84474.765625
+  },
+  {
+    "name": "Chios",
+    "region": "",
+    "country": "Greece",
+    "x": 65697.3125,
+    "y": 65459.1640625
+  },
+  {
+    "name": "Heraklion",
+    "region": "",
+    "country": "Greece",
+    "x": 65729.5078125,
+    "y": 84599.4921875
+  },
+  {
+    "name": "Ioannina",
+    "region": "",
+    "country": "Greece",
+    "x": 41466.15234375,
+    "y": 60374.375
+  },
+  {
+    "name": "Kalamata",
+    "region": "",
+    "country": "Greece",
+    "x": 49651.94921875,
+    "y": 76071.9296875
+  },
+  {
+    "name": "Kavala",
+    "region": "",
+    "country": "Greece",
+    "x": 56953.13671875,
+    "y": 51626.71484375
+  },
+  {
+    "name": "Lamia",
+    "region": "",
+    "country": "Greece",
+    "x": 49093.1328125,
+    "y": 64715.2421875
+  },
+  {
+    "name": "Larissa",
+    "region": "",
+    "country": "Greece",
+    "x": 49166.16796875,
+    "y": 61109.24609375
+  },
+  {
+    "name": "Mitilini",
+    "region": "",
+    "country": "Greece",
+    "x": 65591.734375,
+    "y": 60105.65234375
+  },
+  {
+    "name": "Patras",
+    "region": "",
+    "country": "Greece",
+    "x": 45937.56640625,
+    "y": 70069.5703125
+  },
+  {
+    "name": "Rhodes",
+    "region": "",
+    "country": "Greece",
+    "x": 76941.53125,
+    "y": 75764.78125
+  },
+  {
+    "name": "Thessaloniki",
+    "region": "",
+    "country": "Greece",
+    "x": 50368.359375,
+    "y": 54632.98046875
+  },
+  {
+    "name": "Trikala",
+    "region": "",
+    "country": "Greece",
+    "x": 46207.73046875,
+    "y": 61981.8828125
+  },
+  {
+    "name": "A Coruña",
+    "region": "",
+    "country": "Spain",
+    "x": -83140.90625,
+    "y": 25857.34375
+  },
+  {
+    "name": "Albacete",
+    "region": "",
+    "country": "Spain",
+    "x": -58355.48046875,
+    "y": 58394.94921875
+  },
+  {
+    "name": "Algeciras",
+    "region": "",
+    "country": "Spain",
+    "x": -80942.375,
+    "y": 69036.421875
+  },
+  {
+    "name": "Almaraz",
+    "region": "",
+    "country": "Spain",
+    "x": -74733.734375,
+    "y": 49374.42578125
+  },
+  {
+    "name": "Almería",
+    "region": "",
+    "country": "Spain",
+    "x": -63728.00390625,
+    "y": 69091.0
+  },
+  {
+    "name": "Badajoz",
+    "region": "",
+    "country": "Spain",
+    "x": -83250.0078125,
+    "y": 52860.4140625
+  },
+  {
+    "name": "Bailén",
+    "region": "",
+    "country": "Spain",
+    "x": -69463.484375,
+    "y": 61585.25
+  },
+  {
+    "name": "Barcelona",
+    "region": "",
+    "country": "Spain",
+    "x": -40360.1171875,
+    "y": 47101.859375
+  },
+  {
+    "name": "Beja",
+    "region": "",
+    "country": "Portugal",
+    "x": -88339.3125,
+    "y": 56611.05859375
+  },
+  {
+    "name": "Bilbao",
+    "region": "",
+    "country": "Spain",
+    "x": -58855.08203125,
+    "y": 32583.265625
+  },
+  {
+    "name": "Burgos",
+    "region": "",
+    "country": "Spain",
+    "x": -62334.109375,
+    "y": 37141.0703125
+  },
+  {
+    "name": "Ciudad Real",
+    "region": "",
+    "country": "Spain",
+    "x": -68946.25,
+    "y": 55954.7578125
+  },
+  {
+    "name": "Coimbra",
+    "region": "",
+    "country": "Portugal",
+    "x": -87901.5625,
+    "y": 43976.83203125
+  },
+  {
+    "name": "Córdoba",
+    "region": "",
+    "country": "Spain",
+    "x": -74402.15625,
+    "y": 61412.8984375
+  },
+  {
+    "name": "Cortiçadas de Lavre",
+    "region": "",
+    "country": "Portugal",
+    "x": -88668.921875,
+    "y": 52508.4375
+  },
+  {
+    "name": "El Ejido",
+    "region": "",
+    "country": "Spain",
+    "x": -67717.40625,
+    "y": 68991.34375
+  },
+  {
+    "name": "Evora",
+    "region": "",
+    "country": "Portugal",
+    "x": -87442.3203125,
+    "y": 54044.2890625
+  },
+  {
+    "name": "Faro",
+    "region": "",
+    "country": "Portugal",
+    "x": -90530.3359375,
+    "y": 62415.5859375
+  },
+  {
+    "name": "Gijón",
+    "region": "",
+    "country": "Spain",
+    "x": -70985.84375,
+    "y": 28247.2734375
+  },
+  {
+    "name": "Granada",
+    "region": "",
+    "country": "Spain",
+    "x": -70482.0859375,
+    "y": 65656.875
+  },
+  {
+    "name": "Guarda",
+    "region": "",
+    "country": "Portugal",
+    "x": -82192.265625,
+    "y": 43708.62890625
+  },
+  {
+    "name": "Huelva",
+    "region": "",
+    "country": "Spain",
+    "x": -84837.578125,
+    "y": 62064.16796875
+  },
+  {
+    "name": "Lleida",
+    "region": "",
+    "country": "Spain",
+    "x": -45830.93359375,
+    "y": 44928.6640625
+  },
+  {
+    "name": "León",
+    "region": "",
+    "country": "Spain",
+    "x": -70940.3125,
+    "y": 34227.50390625
+  },
+  {
+    "name": "Lisbon",
+    "region": "",
+    "country": "Portugal",
+    "x": -93310.515625,
+    "y": 49853.34375
+  },
+  {
+    "name": "Madrid",
+    "region": "",
+    "country": "Spain",
+    "x": -65897.78125,
+    "y": 48202.92578125
+  },
+  {
+    "name": "Málaga",
+    "region": "",
+    "country": "Spain",
+    "x": -74294.3125,
+    "y": 68209.875
+  },
+  {
+    "name": "Mengíbar",
+    "region": "",
+    "country": "Spain",
+    "x": -68015.0,
+    "y": 62969.65625
+  },
+  {
+    "name": "Murcia",
+    "region": "",
+    "country": "Spain",
+    "x": -56501.84375,
+    "y": 64632.6484375
+  },
+  {
+    "name": "Navia",
+    "region": "",
+    "country": "Spain",
+    "x": -75062.078125,
+    "y": 27800.50390625
+  },
+  {
+    "name": "O Barco",
+    "region": "",
+    "country": "Spain",
+    "x": -77471.890625,
+    "y": 33979.75
+  },
+  {
+    "name": "Olhão",
+    "region": "",
+    "country": "Portugal",
+    "x": -89220.609375,
+    "y": 61890.7421875
+  },
+  {
+    "name": "Pamplona",
+    "region": "",
+    "country": "Spain",
+    "x": -53642.29296875,
+    "y": 37235.921875
+  },
+  {
+    "name": "Ponte de Sor",
+    "region": "",
+    "country": "Portugal",
+    "x": -87609.9296875,
+    "y": 49702.109375
+  },
+  {
+    "name": "Port de Sagunt",
+    "region": "",
+    "country": "Spain",
+    "x": -51026.0625,
+    "y": 55138.22265625
+  },
+  {
+    "name": "Porto",
+    "region": "",
+    "country": "Portugal",
+    "x": -86461.7734375,
+    "y": 38180.19921875
+  },
+  {
+    "name": "Puertollano",
+    "region": "",
+    "country": "Spain",
+    "x": -70063.046875,
+    "y": 58776.89453125
+  },
+  {
+    "name": "Salamanca",
+    "region": "",
+    "country": "Spain",
+    "x": -73525.9921875,
+    "y": 43417.703125
+  },
+  {
+    "name": "Santander",
+    "region": "",
+    "country": "Spain",
+    "x": -62560.4765625,
+    "y": 31170.16796875
+  },
+  {
+    "name": "Setúbal",
+    "region": "",
+    "country": "Portugal",
+    "x": -92016.953125,
+    "y": 53957.3671875
+  },
+  {
+    "name": "Seville",
+    "region": "",
+    "country": "Spain",
+    "x": -80651.09375,
+    "y": 62085.91015625
+  },
+  {
+    "name": "Sines",
+    "region": "",
+    "country": "Portugal",
+    "x": -92331.484375,
+    "y": 55848.4921875
+  },
+  {
+    "name": "Soria",
+    "region": "",
+    "country": "Spain",
+    "x": -59305.13671875,
+    "y": 41603.09375
+  },
+  {
+    "name": "Tarragona",
+    "region": "",
+    "country": "Spain",
+    "x": -43568.7265625,
+    "y": 48597.62109375
+  },
+  {
+    "name": "Valencia",
+    "region": "",
+    "country": "Spain",
+    "x": -52433.26171875,
+    "y": 56537.1328125
+  },
+  {
+    "name": "Valladolid",
+    "region": "",
+    "country": "Spain",
+    "x": -68298.2421875,
+    "y": 40437.5625
+  },
+  {
+    "name": "Vandellòs",
+    "region": "",
+    "country": "Spain",
+    "x": -45807.734375,
+    "y": 50172.62890625
+  },
+  {
+    "name": "Vigo",
+    "region": "",
+    "country": "Spain",
+    "x": -85371.5078125,
+    "y": 31880.55859375
+  },
+  {
+    "name": "Villarreal",
+    "region": "",
+    "country": "Spain",
+    "x": -49979.60546875,
+    "y": 53263.80859375
+  },
+  {
+    "name": "Teruel",
+    "region": "",
+    "country": "Spain",
+    "x": -53817.16796875,
+    "y": 51245.765625
+  },
+  {
+    "name": "Zaragoza",
+    "region": "",
+    "country": "Spain",
+    "x": -51574.5234375,
+    "y": 43273.89453125
+  },
+  {
+    "name": "Ancona",
+    "region": "",
+    "country": "Italy",
+    "x": 9424.28125,
+    "y": 39138.16015625
+  },
+  {
+    "name": "Bari",
+    "region": "",
+    "country": "Italy",
+    "x": 22578.17578125,
+    "y": 53831.2734375
+  },
+  {
+    "name": "Bologna",
+    "region": "",
+    "country": "Italy",
+    "x": 219.98828125,
+    "y": 33482.8203125
+  },
+  {
+    "name": "Cassino",
+    "region": "",
+    "country": "Italy",
+    "x": 12043.890625,
+    "y": 52064.89453125
+  },
+  {
+    "name": "Cagliari",
+    "region": "",
+    "country": "Italy",
+    "x": -10160.85546875,
+    "y": 64051.81640625
+  },
+  {
+    "name": "Catania",
+    "region": "",
+    "country": "Italy",
+    "x": 16420.71484375,
+    "y": 74982.421875
+  },
+  {
+    "name": "Catanzaro",
+    "region": "",
+    "country": "Italy",
+    "x": 23291.65625,
+    "y": 66425.7578125
+  },
+  {
+    "name": "Florence",
+    "region": "",
+    "country": "Italy",
+    "x": 581.625,
+    "y": 38367.7734375
+  },
+  {
+    "name": "Genoa",
+    "region": "",
+    "country": "Italy",
+    "x": -9232.37890625,
+    "y": 34875.9765625
+  },
+  {
+    "name": "Livorno",
+    "region": "",
+    "country": "Italy",
+    "x": -2968.421875,
+    "y": 39681.68359375
+  },
+  {
+    "name": "Messina",
+    "region": "",
+    "country": "Italy",
+    "x": 17975.7421875,
+    "y": 70539.15625
+  },
+  {
+    "name": "Naples",
+    "region": "",
+    "country": "Italy",
+    "x": 12418.1015625,
+    "y": 55071.9296875
+  },
+  {
+    "name": "Olbia",
+    "region": "",
+    "country": "Italy",
+    "x": -7765.93359375,
+    "y": 54715.40625
+  },
+  {
+    "name": "Palermo",
+    "region": "",
+    "country": "Italy",
+    "x": 8350.890625,
+    "y": 70487.1875
+  },
+  {
+    "name": "Parma",
+    "region": "",
+    "country": "Italy",
+    "x": -3406.56640625,
+    "y": 33434.16796875
+  },
+  {
+    "name": "Pescara",
+    "region": "",
+    "country": "Italy",
+    "x": 12397.99609375,
+    "y": 46327.96875
+  },
+  {
+    "name": "Rome",
+    "region": "",
+    "country": "Italy",
+    "x": 5511.125,
+    "y": 48579.2109375
+  },
+  {
+    "name": "Villa San Giovanni",
+    "region": "",
+    "country": "Italy",
+    "x": 19020.703125,
+    "y": 70314.0390625
+  },
+  {
+    "name": "Sassari",
+    "region": "",
+    "country": "Italy",
+    "x": -11556.4140625,
+    "y": 55186.86328125
+  },
+  {
+    "name": "Suzzara",
+    "region": "",
+    "country": "Italy",
+    "x": -1130.94921875,
+    "y": 31926.66796875
+  },
+  {
+    "name": "Taranto",
+    "region": "",
+    "country": "Italy",
+    "x": 25490.42578125,
+    "y": 57821.28125
+  },
+  {
+    "name": "Terni",
+    "region": "",
+    "country": "Italy",
+    "x": 6216.4921875,
+    "y": 45691.66015625
+  },
+  {
+    "name": "Werlte",
+    "region": "",
+    "country": "Germany",
+    "x": -9597.3515625,
+    "y": -13020.4765625
+  },
+  {
+    "name": "Aalborg",
+    "region": "",
+    "country": "Denmark",
+    "x": 481.93359375,
+    "y": -36295.73046875
+  },
+  {
+    "name": "Esbjerg",
+    "region": "",
+    "country": "Denmark",
+    "x": -5274.5546875,
+    "y": -27976.015625
+  },
+  {
+    "name": "Frederikshavn",
+    "region": "",
+    "country": "Denmark",
+    "x": 2361.5703125,
+    "y": -38541.8671875
+  },
+  {
+    "name": "Gedser",
+    "region": "",
+    "country": "Denmark",
+    "x": 5970.98046875,
+    "y": -22420.453125
+  },
+  {
+    "name": "Hirtshals",
+    "region": "",
+    "country": "Denmark",
+    "x": 775.34375,
+    "y": -39243.4140625
+  },
+  {
+    "name": "Copenhagen",
+    "region": "",
+    "country": "Denmark",
+    "x": 6537.53125,
+    "y": -29202.416015625
+  },
+  {
+    "name": "Odense",
+    "region": "",
+    "country": "Denmark",
+    "x": 1016.866455078125,
+    "y": -26813.02734375
+  },
+  {
+    "name": "Malmö",
+    "region": "",
+    "country": "Sweden",
+    "x": 10232.89453125,
+    "y": -28003.658203125
+  },
+  {
+    "name": "Helsingborg",
+    "region": "",
+    "country": "Sweden",
+    "x": 9005.078125,
+    "y": -30526.42578125
+  },
+  {
+    "name": "Gothenburg",
+    "region": "",
+    "country": "Sweden",
+    "x": 7240.9990234375,
+    "y": -40514.43359375
+  },
+  {
+    "name": "Jönköping",
+    "region": "",
+    "country": "Sweden",
+    "x": 13877.13671875,
+    "y": -40045.71875
+  },
+  {
+    "name": "Linköping",
+    "region": "",
+    "country": "Sweden",
+    "x": 17511.546875,
+    "y": -43713.02734375
+  },
+  {
+    "name": "Stockholm",
+    "region": "",
+    "country": "Sweden",
+    "x": 24324.060546875,
+    "y": -48392.47265625
+  },
+  {
+    "name": "Västerås",
+    "region": "",
+    "country": "Sweden",
+    "x": 20583.77734375,
+    "y": -50711.93359375
+  },
+  {
+    "name": "Uppsala",
+    "region": "",
+    "country": "Sweden",
+    "x": 23521.328125,
+    "y": -52104.625
+  },
+  {
+    "name": "Örebro",
+    "region": "",
+    "country": "Sweden",
+    "x": 16587.70703125,
+    "y": -48894.84375
+  },
+  {
+    "name": "Kalmar",
+    "region": "",
+    "country": "Sweden",
+    "x": 19959.359375,
+    "y": -34554.6015625
+  },
+  {
+    "name": "Kapellskär",
+    "region": "",
+    "country": "Sweden",
+    "x": 27787.4140625,
+    "y": -51382.78125
+  },
+  {
+    "name": "Karlskrona",
+    "region": "",
+    "country": "Sweden",
+    "x": 16745.43359375,
+    "y": -31232.5234375
+  },
+  {
+    "name": "Växjö",
+    "region": "",
+    "country": "Sweden",
+    "x": 15340.48046875,
+    "y": -35140.296875
+  },
+  {
+    "name": "Södertälje",
+    "region": "",
+    "country": "Sweden",
+    "x": 23325.0703125,
+    "y": -46540.0
+  },
+  {
+    "name": "Nynäshamn",
+    "region": "",
+    "country": "Sweden",
+    "x": 24731.85546875,
+    "y": -46649.2265625
+  },
+  {
+    "name": "Bergen",
+    "region": "",
+    "country": "Norway",
+    "x": -10571.70703125,
+    "y": -56397.765625
+  },
+  {
+    "name": "Oslo",
+    "region": "",
+    "country": "Norway",
+    "x": 4140.7890625,
+    "y": -53680.66796875
+  },
+  {
+    "name": "Kristiansand",
+    "region": "",
+    "country": "Norway",
+    "x": -4788.40234375,
+    "y": -43061.625
+  },
+  {
+    "name": "Stavanger",
+    "region": "",
+    "country": "Norway",
+    "x": -10819.9130859375,
+    "y": -48349.30078125
+  },
+  {
+    "name": "Trelleborg",
+    "region": "",
+    "country": "Sweden",
+    "x": 10508.1875,
+    "y": -26107.15625
+  },
+  {
+    "name": "Aarhus",
+    "region": "",
+    "country": "Denmark",
+    "x": 690.65625,
+    "y": -31564.17578125
+  },
+  {
+    "name": "Karlstad",
+    "region": "",
+    "country": "Sweden",
+    "x": 12451.3486328125,
+    "y": -48848.64453125
+  },
+  {
+    "name": "Ålesund",
+    "region": "",
+    "country": "Norway",
+    "x": -8981.7197265625,
+    "y": -67681.109375
+  },
+  {
+    "name": "Alta",
+    "region": "",
+    "country": "Norway",
+    "x": 32634.919921875,
+    "y": -113907.546875
+  },
+  {
+    "name": "Andenes",
+    "region": "",
+    "country": "Norway",
+    "x": 18460.81640625,
+    "y": -109363.3671875
+  },
+  {
+    "name": "Arvidsjaur",
+    "region": "",
+    "country": "Sweden",
+    "x": 25958.96484375,
+    "y": -84482.2265625
+  },
+  {
+    "name": "Bodø",
+    "region": "",
+    "country": "Norway",
+    "x": 14025.1591796875,
+    "y": -94728.7109375
+  },
+  {
+    "name": "Borlänge",
+    "region": "",
+    "country": "Sweden",
+    "x": 16567.318359375,
+    "y": -55230.3125
+  },
+  {
+    "name": "Dombås",
+    "region": "",
+    "country": "Norway",
+    "x": -476.53277587890625,
+    "y": -65363.66015625
+  },
+  {
+    "name": "Falun",
+    "region": "",
+    "country": "Sweden",
+    "x": 17269.251953125,
+    "y": -56842.2578125
+  },
+  {
+    "name": "Gävle",
+    "region": "",
+    "country": "Sweden",
+    "x": 22008.328125,
+    "y": -57300.15234375
+  },
+  {
+    "name": "Hamar",
+    "region": "",
+    "country": "Norway",
+    "x": 4072.739990234375,
+    "y": -59036.92578125
+  },
+  {
+    "name": "Haparanda",
+    "region": "",
+    "country": "Sweden",
+    "x": 36820.91015625,
+    "y": -87202.1015625
+  },
+  {
+    "name": "Honningsvåg",
+    "region": "",
+    "country": "Norway",
+    "x": 37299.6484375,
+    "y": -120477.7890625
+  },
+  {
+    "name": "Ivalo",
+    "region": "",
+    "country": "Finland",
+    "x": 41928.30078125,
+    "y": -105703.2109375
+  },
+  {
+    "name": "Joensuu",
+    "region": "",
+    "country": "Finland",
+    "x": 54140.39453125,
+    "y": -73605.875
+  },
+  {
+    "name": "Jyväskylä",
+    "region": "",
+    "country": "Finland",
+    "x": 43040.359375,
+    "y": -68276.8203125
+  },
+  {
+    "name": "Kajaani",
+    "region": "",
+    "country": "Finland",
+    "x": 47532.7421875,
+    "y": -79487.03125
+  },
+  {
+    "name": "Karesuando",
+    "region": "",
+    "country": "Sweden",
+    "x": 31538.361328125,
+    "y": -103049.453125
+  },
+  {
+    "name": "Kiruna",
+    "region": "",
+    "country": "Sweden",
+    "x": 26355.001953125,
+    "y": -99209.953125
+  },
+  {
+    "name": "Kokkola",
+    "region": "",
+    "country": "Finland",
+    "x": 35676.74609375,
+    "y": -75245.3984375
+  },
+  {
+    "name": "Kristiansund",
+    "region": "",
+    "country": "Norway",
+    "x": -3896.23046875,
+    "y": -70875.28125
+  },
+  {
+    "name": "Kuopio",
+    "region": "",
+    "country": "Finland",
+    "x": 49139.91796875,
+    "y": -71830.140625
+  },
+  {
+    "name": "Kuusamo",
+    "region": "",
+    "country": "Finland",
+    "x": 48547.3125,
+    "y": -90348.6015625
+  },
+  {
+    "name": "Lappeenranta",
+    "region": "",
+    "country": "Finland",
+    "x": 51895.25390625,
+    "y": -64039.75390625
+  },
+  {
+    "name": "Lillehammer",
+    "region": "",
+    "country": "Norway",
+    "x": 3898.7373046875,
+    "y": -59855.8046875
+  },
+  {
+    "name": "Lulea",
+    "region": "",
+    "country": "Sweden",
+    "x": 30767.001953125,
+    "y": -87298.15625
+  },
+  {
+    "name": "Mikkeli",
+    "region": "",
+    "country": "Finland",
+    "x": 48296.91796875,
+    "y": -66026.7734375
+  },
+  {
+    "name": "Mo i Rana",
+    "region": "",
+    "country": "Norway",
+    "x": 13351.763671875,
+    "y": -88643.1015625
+  },
+  {
+    "name": "Narvik",
+    "region": "",
+    "country": "Norway",
+    "x": 20156.8125,
+    "y": -102329.1171875
+  },
+  {
+    "name": "Örnsköldsvik",
+    "region": "",
+    "country": "Sweden",
+    "x": 24096.787109375,
+    "y": -72187.5703125
+  },
+  {
+    "name": "Östersund",
+    "region": "",
+    "country": "Sweden",
+    "x": 14175.357421875,
+    "y": -71425.4375
+  },
+  {
+    "name": "Oulu",
+    "region": "",
+    "country": "Finland",
+    "x": 40223.20703125,
+    "y": -83628.671875
+  },
+  {
+    "name": "Rovaniemi",
+    "region": "",
+    "country": "Finland",
+    "x": 39149.48046875,
+    "y": -90956.609375
+  },
+  {
+    "name": "Skellefteå",
+    "region": "",
+    "country": "Sweden",
+    "x": 28219.603515625,
+    "y": -82048.5546875
+  },
+  {
+    "name": "Steinkjer",
+    "region": "",
+    "country": "Norway",
+    "x": 6061.3828125,
+    "y": -75766.21875
+  },
+  {
+    "name": "Sundsvall",
+    "region": "",
+    "country": "Sweden",
+    "x": 20718.7265625,
+    "y": -66916.6953125
+  },
+  {
+    "name": "Svolvær",
+    "region": "",
+    "country": "Norway",
+    "x": 12228.7529296875,
+    "y": -101478.15625
+  },
+  {
+    "name": "Tornio",
+    "region": "",
+    "country": "Finland",
+    "x": 37341.42578125,
+    "y": -87570.90625
+  },
+  {
+    "name": "Tromsø",
+    "region": "",
+    "country": "Norway",
+    "x": 23170.9375,
+    "y": -112476.4140625
+  },
+  {
+    "name": "Trondheim",
+    "region": "",
+    "country": "Norway",
+    "x": 2719.376953125,
+    "y": -73711.328125
+  },
+  {
+    "name": "Umeå",
+    "region": "",
+    "country": "Sweden",
+    "x": 27257.31640625,
+    "y": -76920.484375
+  },
+  {
+    "name": "Vaasa",
+    "region": "",
+    "country": "Finland",
+    "x": 32036.234375,
+    "y": -71706.234375
+  }
+]
