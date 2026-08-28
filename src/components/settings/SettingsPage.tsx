@@ -155,7 +155,7 @@ export function SettingsPage({
 
         <div>
           <h2>
-            {t("settings.title")}
+            
           </h2>
 
           <p>

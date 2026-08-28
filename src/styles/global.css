@@ -29,38 +29,74 @@ select {
     font: inherit;
 }
 
+
+/* =========================================================
+   App Layout
+   ========================================================= */
+
 .app-shell {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 28px 34px 20px;
+    padding: 20px 34px 18px;
     background: #20262d;
 }
+
+
+/* =========================================================
+   Top Bar
+   ========================================================= */
 
 .top-bar {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 24px;
+    gap: 20px;
 }
 
+
+/* =========================================================
+   Branding
+   ========================================================= */
+
+.app-brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.app-brand-icon {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 auto;
+    display: block;
+    border-radius: 9px;
+    object-fit: cover;
+}
+
+.app-brand h1,
 .app-header h1 {
     margin: 0;
-    font-size: 29px;
+    color: #f5f6f7;
+    font-size: 26px;
     line-height: 1;
     font-weight: 800;
     letter-spacing: 0.5px;
-    color: #f5f6f7;
 }
+
+
+/* =========================================================
+   Statistics
+   ========================================================= */
 
 .statistics {
     display: flex;
     align-items: center;
-    gap: 9px;
-    margin-top: 11px;
+    gap: 8px;
+    margin-top: 6px;
     color: #b0b7bf;
-    font-size: 15px;
+    font-size: 14px;
 }
 
     .statistics strong {
@@ -75,13 +111,17 @@ select {
     color: #77808a;
 }
 
-/* Live status */
+
+/* =========================================================
+   Live Status
+   ========================================================= */
 
 .live-status {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 7px;
-    margin-top: 9px;
+    margin-top: 5px;
     color: #9da6af;
     font-size: 13px;
 }
@@ -100,6 +140,7 @@ select {
 
     .live-status-dot.refreshing {
         background: #c7a764;
+        box-shadow: 0 0 7px rgb(199 167 100 / 35%);
     }
 
 .live-status-label {
@@ -111,13 +152,18 @@ select {
     color: #89939e;
 }
 
+
+/* =========================================================
+   Refresh
+   ========================================================= */
+
 .refresh-button {
     display: inline-flex;
     align-items: center;
     gap: 7px;
-    height: 34px;
-    margin-left: 9px;
-    padding: 0 11px;
+    height: 32px;
+    margin-left: 5px;
+    padding: 0 10px;
     color: #dfe4e9;
     background: #2a3139;
     border: 1px solid #3b444e;
@@ -127,9 +173,10 @@ select {
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
 }
 
-    .refresh-button:hover {
+    .refresh-button:hover:not(:disabled) {
         background: #303841;
         border-color: #4b5662;
     }
@@ -145,6 +192,12 @@ select {
     animation: roadwatch-refresh-spin 0.9s linear infinite;
 }
 
+.refresh-error {
+    margin-top: 5px;
+    color: #d87b7b;
+    font-size: 12px;
+}
+
 @keyframes roadwatch-refresh-spin {
     from {
         transform: rotate(0deg);
@@ -155,6 +208,11 @@ select {
     }
 }
 
+
+/* =========================================================
+   Language Selector
+   ========================================================= */
+
 .language-selector {
     display: flex;
     align-items: center;
@@ -163,7 +221,7 @@ select {
 }
 
     .language-selector select {
-        height: 38px;
+        height: 36px;
         min-width: 68px;
         padding: 0 10px;
         color: #dfe4e9;
@@ -173,259 +231,14 @@ select {
         outline: none;
     }
 
-.controls {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 165px;
-    gap: 14px;
-    margin-top: 12px;
-    margin-bottom: 14px;
-}
 
-.player-search {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    height: 62px;
-    padding: 0 18px;
-    color: #89939e;
-    background: #292f37;
-    border: 1px solid #363f49;
-    border-radius: 7px;
-}
-
-    .player-search input {
-        width: 100%;
-        border: 0;
-        outline: 0;
-        color: #eef1f4;
-        background: transparent;
-        font-size: 16px;
-    }
-
-        .player-search input::placeholder {
-            color: #7d8792;
-        }
-
-.status-filter {
-    height: 62px;
-    padding: 0 16px;
-    color: #e3e7eb;
-    background: #292f37;
-    border: 1px solid #363f49;
-    border-radius: 7px;
-    outline: none;
-}
-
-.player-list {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    min-height: 0;
-    overflow-y: auto;
-    padding-right: 8px;
-    padding-bottom: 10px;
-}
-
-    .player-list::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    .player-list::-webkit-scrollbar-track {
-        background: #252b32;
-        border-radius: 20px;
-    }
-
-    .player-list::-webkit-scrollbar-thumb {
-        background: #59636e;
-        border-radius: 20px;
-    }
-
-.player-card {
-    display: grid;
-    grid-template-columns: 28px 68px minmax(0, 1fr) auto;
-    align-items: center;
-    min-height: 112px;
-    padding: 16px 24px;
-    background: #292f37;
-    border: 1px solid #343d47;
-    border-radius: 8px;
-    transition: background 0.15s ease, border-color 0.15s ease;
-}
-
-    .player-card:hover {
-        background: #2c333b;
-        border-color: #454f5a;
-    }
-
-.status-column {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.status-dot {
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-}
-
-    .status-dot.online {
-        background: #77c76a;
-        box-shadow: 0 0 9px rgb(119 199 106 / 45%);
-    }
-
-    .status-dot.offline {
-        background: #68727c;
-    }
-
-.player-avatar {
-    width: 54px;
-    height: 54px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border-radius: 50%;
-    color: #d7dde3;
-    background: #3b4550;
-    font-size: 19px;
-    font-weight: 700;
-}
-
-    .player-avatar img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-.player-main {
-    display: grid;
-    grid-template-columns: minmax(260px, 1fr) minmax(190px, 0.55fr);
-    align-items: center;
-    gap: 32px;
-    padding-left: 18px;
-}
-
-.player-info h2 {
-    margin: 0 0 5px;
-    color: #f0f2f4;
-    font-size: 17px;
-    font-weight: 700;
-}
-
-.player-role {
-    margin: 0;
-    color: #c7a764;
-    font-size: 14px;
-}
-
-.player-membership {
-    margin: 6px 0 0;
-    color: #9aa4ae;
-    font-size: 13px;
-}
-
-.player-meta {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-top: 7px;
-    color: #aeb7c0;
-    font-size: 13px;
-}
-
-    .player-meta span {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-    }
-
-.player-location {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    color: #c7a764;
-}
-
-    .player-location > div {
-        display: flex;
-        flex-direction: column;
-        gap: 3px;
-    }
-
-    .player-location strong {
-        color: #e8ebee;
-        font-size: 15px;
-        font-weight: 600;
-    }
-
-    .player-location span {
-        color: #99a3ad;
-        font-size: 13px;
-    }
-
-.distance-column {
-    padding-left: 28px;
-    color: #aeb6bf;
-    font-size: 15px;
-    white-space: nowrap;
-}
-
-.empty-state {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 180px;
-    color: #9da6af;
-    background: #292f37;
-    border: 1px solid #343d47;
-    border-radius: 8px;
-}
-
-@media (max-width: 760px) {
-    .app-shell {
-        padding: 20px;
-    }
-
-    .controls {
-        grid-template-columns: 1fr;
-    }
-
-    .player-card {
-        grid-template-columns: 22px 58px minmax(0, 1fr);
-        padding: 15px;
-    }
-
-    .player-avatar {
-        width: 48px;
-        height: 48px;
-    }
-
-    .player-main {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        padding-left: 12px;
-    }
-
-    .distance-column {
-        display: none;
-    }
-
-    .live-status {
-        flex-wrap: wrap;
-    }
-
-    .refresh-button {
-        margin-left: 0;
-    }
-}
-/* ================================
-   RoadWatch Header / Settings
-   ================================ */
+/* =========================================================
+   Settings Button
+   ========================================================= */
 
 .settings-button {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -455,9 +268,38 @@ select {
     }
 
 
-/* ================================
-   VTC Member List / Scrolling
-   ================================ */
+/* =========================================================
+   Section Headings
+   ========================================================= */
+
+.current-player-section h2,
+.vtc-members-section h2 {
+    margin: 0;
+    color: #e8ebee;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   Current Player
+   ========================================================= */
+
+.current-player-section {
+    flex: 0 0 auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+    .current-player-section h2 {
+        margin-bottom: 6px;
+    }
+
+
+/* =========================================================
+   VTC Members
+   ========================================================= */
 
 .vtc-members-section {
     flex: 1;
@@ -468,27 +310,283 @@ select {
 
     .vtc-members-section h2 {
         flex: 0 0 auto;
+        margin-bottom: 6px;
     }
+
+
+/* =========================================================
+   Search / Filters
+   ========================================================= */
 
 .controls {
     flex: 0 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 165px;
+    gap: 12px;
+    margin-top: 8px;
+    margin-bottom: 10px;
 }
+
+.player-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 30px;
+    padding: 0 14px;
+    color: #89939e;
+    background: #292f37;
+    border: 1px solid #363f49;
+    border-radius: 7px;
+}
+
+    .player-search input {
+        width: 100%;
+        border: 0;
+        outline: 0;
+        color: #eef1f4;
+        background: transparent;
+        font-size: 14px;
+    }
+
+        .player-search input::placeholder {
+            color: #7d8792;
+        }
+
+.status-filter {
+    height: 30px;
+    padding: 0 14px;
+    color: #e3e7eb;
+    background: #292f37;
+    border: 1px solid #363f49;
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   Player List
+   ========================================================= */
 
 .player-list {
     flex: 1 1 auto;
     min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
     overflow-y: auto;
     overflow-x: hidden;
     padding-right: 8px;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
-/* ================================
+
+    .player-list::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .player-list::-webkit-scrollbar-track {
+        background: #252b32;
+        border-radius: 20px;
+    }
+
+    .player-list::-webkit-scrollbar-thumb {
+        background: #59636e;
+        border-radius: 20px;
+    }
+
+
+/* =========================================================
+   Player Card
+   ========================================================= */
+
+.player-card {
+    display: grid;
+    grid-template-columns: 20px 50px minmax(0, 1fr) auto;
+    align-items: center;
+    height: 78px;
+    padding: 7px 16px;
+    background: #292f37;
+    border: 1px solid #343d47;
+    border-radius: 8px;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+    .player-card:hover {
+        background: #2c333b;
+        border-color: #454f5a;
+    }
+
+
+/* =========================================================
+   Player Status
+   ========================================================= */
+
+.status-column {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+    .status-dot.online {
+        background: #77c76a;
+        box-shadow: 0 0 8px rgb(119 199 106 / 45%);
+    }
+
+    .status-dot.offline {
+        background: #68727c;
+    }
+
+
+/* =========================================================
+   Player Avatar
+   ========================================================= */
+
+.player-avatar {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+    color: #d7dde3;
+    background: #3b4550;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+    .player-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+/* =========================================================
+   Player Information
+   ========================================================= */
+
+.player-main {
+    display: grid;
+    grid-template-columns: minmax(220px, 1fr) minmax(170px, 0.55fr);
+    align-items: center;
+    gap: 24px;
+    padding-left: 12px;
+}
+
+.player-info h2 {
+    margin: 0 0 2px;
+    color: #f0f2f4;
+    font-size: 15px;
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+.player-role {
+    margin: 0;
+    color: #c7a764;
+    font-size: 12px;
+}
+
+.player-membership {
+    margin: 3px 0 0;
+    color: #9aa4ae;
+    font-size: 11px;
+}
+
+.player-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 4px;
+    color: #aeb7c0;
+    font-size: 12px;
+}
+
+    .player-meta span {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+
+/* =========================================================
+   Player Location
+   ========================================================= */
+
+.player-location {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #c7a764;
+}
+
+    .player-location > div {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .player-location strong {
+        color: #e8ebee;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .player-location span {
+        color: #99a3ad;
+        font-size: 11px;
+    }
+
+    .player-location svg {
+        width: 16px;
+        height: 16px;
+    }
+
+
+/* =========================================================
+   Distance
+   ========================================================= */
+
+.distance-column {
+    min-width: 68px;
+    padding-left: 18px;
+    color: #aeb6bf;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: right;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   Empty State
+   ========================================================= */
+
+.empty-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+    color: #9da6af;
+    background: #292f37;
+    border: 1px solid #343d47;
+    border-radius: 8px;
+}
+
+
+/* =========================================================
    RoadWatch Settings Page
-   ================================ */
+   ========================================================= */
 
 .settings-page {
     width: 100%;
-    max-width: 884px;
+    max-width: 700px;
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -513,7 +611,9 @@ select {
     }
 
 
-/* Header */
+/* =========================================================
+   Settings Header
+   ========================================================= */
 
 .settings-page-header {
     display: flex;
@@ -565,13 +665,14 @@ select {
 }
 
 
-/* Settings Cards */
+/* =========================================================
+   Settings Cards
+   ========================================================= */
 
 .settings-section {
-    width: calc(100% - 14px);
-    margin-right: 14px;
-    margin-bottom: 16px;
-    padding: 22px 22px 20px;
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 16px 20px;
     background: #292f37;
     border: 1px solid #343d47;
     border-radius: 8px;
@@ -612,7 +713,9 @@ select {
 }
 
 
-/* Fields */
+/* =========================================================
+   Settings Fields
+   ========================================================= */
 
 .settings-field {
     display: flex;
@@ -668,16 +771,15 @@ select {
         line-height: 1.45;
     }
 
-
-    /* Select */
-
     .settings-field select {
         appearance: auto;
         cursor: pointer;
     }
 
 
-/* Actions */
+/* =========================================================
+   Settings Actions
+   ========================================================= */
 
 .settings-actions {
     display: flex;
@@ -722,7 +824,9 @@ select {
     }
 
 
-/* Save message */
+/* =========================================================
+   Settings Message
+   ========================================================= */
 
 .settings-message {
     margin: 0;
@@ -736,9 +840,53 @@ select {
     }
 
 
-/* Responsive */
+/* =========================================================
+   Responsive
+   ========================================================= */
 
 @media (max-width: 760px) {
+    .app-shell {
+        padding: 18px 20px;
+    }
+
+    .top-bar {
+        gap: 14px;
+    }
+
+    .controls {
+        grid-template-columns: 1fr;
+    }
+
+    .player-card {
+        grid-template-columns: 20px 48px minmax(0, 1fr);
+        height: auto;
+        min-height: 72px;
+        padding: 10px 14px;
+    }
+
+    .player-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .player-main {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        padding-left: 10px;
+    }
+
+    .distance-column {
+        display: none;
+    }
+
+    .live-status {
+        flex-wrap: wrap;
+    }
+
+    .refresh-button {
+        margin-left: 0;
+    }
+
     .settings-page {
         max-width: none;
     }
@@ -750,121 +898,5 @@ select {
     .settings-actions {
         align-items: flex-start;
         flex-direction: column;
-    }
-}
-/* ================================
-   RoadWatch Branding
-   ================================ */
-
-.app-brand {
-    gap: 9px;
-}
-
-.app-brand-icon {
-    width: 32px;
-    height: 32px;
-    flex: 0 0 auto;
-    display: block;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-.app-brand-icon {
-    width: 38px;
-    height: 38px;
-    flex: 0 0 auto;
-    display: block;
-    border-radius: 9px;
-    object-fit: cover;
-}
-
-.app-brand h1 {
-    margin: 0;
-}
-/* =========================================================
-   Live Refresh
-   ========================================================= */
-
-.live-status {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 7px;
-    margin-top: 8px;
-    color: #9da6af;
-    font-size: 13px;
-}
-
-.live-status-dot {
-    width: 8px;
-    height: 8px;
-    flex: 0 0 auto;
-    border-radius: 50%;
-}
-
-    .live-status-dot.live {
-        background: #77c76a;
-        box-shadow: 0 0 7px rgba(119, 199, 106, 0.45);
-    }
-
-    .live-status-dot.refreshing {
-        background: #c7a764;
-        box-shadow: 0 0 7px rgba(199, 167, 100, 0.35);
-    }
-
-.live-status-label {
-    color: #78c768;
-    font-weight: 600;
-}
-
-.live-status-time {
-    color: #89939e;
-}
-
-.refresh-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    height: 34px;
-    margin-left: 6px;
-    padding: 0 11px;
-    color: #dfe4e9;
-    background: #2a3139;
-    border: 1px solid #3b444e;
-    border-radius: 7px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-    .refresh-button:hover:not(:disabled) {
-        background: #303841;
-        border-color: #4b5662;
-    }
-
-    .refresh-button:disabled {
-        color: #89939e;
-        background: #272e35;
-        border-color: #343d47;
-        cursor: default;
-    }
-
-.refresh-icon-spinning {
-    animation: roadwatch-refresh-spin 0.9s linear infinite;
-}
-
-.refresh-error {
-    margin-top: 7px;
-    color: #d87b7b;
-    font-size: 12px;
-}
-
-@keyframes roadwatch-refresh-spin {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
     }
 }
