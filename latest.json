@@ -1,0 +1,11 @@
+{
+  "version": "0.1.1",
+  "notes": "RoadWatch v0.1.1: The interface is now English-only. Removed the language selector and unused internationalization dependencies.",
+  "pub_date": "2026-08-30T22:00:00Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRRDRWTTl3YXZYUGxwNmdIVXFjMnFMa2pCUG1KcWdzMWFyaStic1ZhcTdTSy9pWk9GTUdmbC9ZbnZhNTk2MzNrcHRlVFFtdDhHa3BQWEE1ZEd1QU5USUhEY1MvV2dzaWdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4MTI0NjEyCWZpbGU6Um9hZFdhdGNoXzAuMS4xX3g2NC1zZXR1cC5leGUKdmJ5a3NpS2Naa2NheHhkbUxaT0pVeWlJUkRaR3NkK3l1Zk9OSjFZV0J5cUh5RTQ5WkYxSFEyVjRIZlNYWEIvenpjejF2R1ZpeTZVc1I1Y003WC9hQ3c9PQo=",
+      "url": "https://github.com/GorillaKeks/RoadWatch/releases/download/v0.1.1/RoadWatch_0.1.1_x64-setup.exe"
+    }
+  }
+}
