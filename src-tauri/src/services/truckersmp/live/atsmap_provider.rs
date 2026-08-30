@@ -5,12 +5,7 @@ use std::pin::Pin;
 use reqwest::Client;
 use serde::Deserialize;
 
-use crate::models::{
-    GameType,
-    LivePlayer,
-    LivePosition,
-    PlayerStatus,
-};
+use crate::models::{GameType, LivePlayer, LivePosition, PlayerStatus};
 
 use crate::services::truckersmp::server::TruckersMpServerService;
 
@@ -99,13 +94,11 @@ impl AtsMapProvider {
         server_id: u64,
         server_name: &str,
     ) -> Result<Vec<LivePlayer>, String> {
-        let tracker_server_id =
-            Self::tracker_server_id(server_id);
+        let tracker_server_id = Self::tracker_server_id(server_id);
 
         println!(
             "RoadWatch ATSMap provider: TMP server ID {} -> tracker ID {}.",
-            server_id,
-            tracker_server_id
+            server_id, tracker_server_id
         );
 
         let response = self
@@ -122,9 +115,7 @@ impl AtsMapProvider {
             .send()
             .await
             .map_err(|error| {
-                format!(
-                    "ATSMap provider request failed for server {server_id}: {error}"
-                )
+                format!("ATSMap provider request failed for server {server_id}: {error}")
             })?;
 
         let status = response.status();
@@ -135,14 +126,9 @@ impl AtsMapProvider {
             ));
         }
 
-        let payload: AreaResponse = response
-            .json()
-            .await
-            .map_err(|error| {
-                format!(
-                    "Could not parse ATSMap response for server {server_id}: {error}"
-                )
-            })?;
+        let payload: AreaResponse = response.json().await.map_err(|error| {
+            format!("Could not parse ATSMap response for server {server_id}: {error}")
+        })?;
 
         if !payload.success {
             return Ok(Vec::new());
@@ -163,13 +149,9 @@ impl AtsMapProvider {
                     game: Some(GameType::Ats),
 
                     // Keep the original TruckersMP server ID.
-                    server_id: player
-                        .server_id
-                        .or(Some(server_id)),
+                    server_id: player.server_id.or(Some(server_id)),
 
-                    server: Some(
-                        server_name.to_string(),
-                    ),
+                    server: Some(server_name.to_string()),
 
                     location: None,
 
@@ -188,24 +170,17 @@ impl AtsMapProvider {
         Ok(players)
     }
 
-    async fn fetch_live_players(
-        &self,
-    ) -> Result<Vec<LivePlayer>, String> {
-        let server_service =
-            TruckersMpServerService::new();
+    async fn fetch_live_players(&self) -> Result<Vec<LivePlayer>, String> {
+        let server_service = TruckersMpServerService::new();
 
-        let servers = server_service
-            .get_ats_servers()
-            .await?;
+        let servers = server_service.get_ats_servers().await?;
 
         println!(
             "RoadWatch ATSMap provider: {} ATS servers found.",
             servers.len()
         );
 
-        let mut players_by_mp_id:
-            HashMap<u64, LivePlayer> =
-            HashMap::new();
+        let mut players_by_mp_id: HashMap<u64, LivePlayer> = HashMap::new();
 
         for server in servers {
             if !server.online {
@@ -214,15 +189,11 @@ impl AtsMapProvider {
 
             println!(
                 "RoadWatch ATSMap provider: checking {} (ID {}).",
-                server.name,
-                server.id
+                server.name, server.id
             );
 
             match self
-                .get_live_players_for_server(
-                    server.id,
-                    &server.name,
-                )
+                .get_live_players_for_server(server.id, &server.name)
                 .await
             {
                 Ok(players) => {
@@ -233,32 +204,22 @@ impl AtsMapProvider {
                     );
 
                     for player in players {
-                        players_by_mp_id.insert(
-                            player.truckersmp_id,
-                            player,
-                        );
+                        players_by_mp_id.insert(player.truckersmp_id, player);
                     }
                 }
 
                 Err(error) => {
                     eprintln!(
                         "RoadWatch ATSMap provider: skipping {} (ID {}): {}",
-                        server.name,
-                        server.id,
-                        error
+                        server.name, server.id, error
                     );
                 }
             }
         }
 
-        let mut players: Vec<LivePlayer> =
-            players_by_mp_id
-                .into_values()
-                .collect();
+        let mut players: Vec<LivePlayer> = players_by_mp_id.into_values().collect();
 
-        players.sort_by_key(
-            |player| player.truckersmp_id,
-        );
+        players.sort_by_key(|player| player.truckersmp_id);
 
         println!(
             "RoadWatch ATSMap provider: {} unique ATS players received.",
@@ -276,17 +237,8 @@ impl LivePlayerProvider for AtsMapProvider {
 
     fn get_live_players(
         &self,
-    ) -> Pin<
-        Box<
-            dyn Future<
-                    Output = Result<Vec<LivePlayer>, String>,
-                > + Send
-                + '_,
-        >,
-    > {
-        Box::pin(async move {
-            self.fetch_live_players().await
-        })
+    ) -> Pin<Box<dyn Future<Output = Result<Vec<LivePlayer>, String>> + Send + '_>> {
+        Box::pin(async move { self.fetch_live_players().await })
     }
 }
 

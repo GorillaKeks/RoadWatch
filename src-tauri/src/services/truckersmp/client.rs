@@ -21,18 +21,12 @@ impl TruckersMpClient {
         }
     }
 
-    pub async fn get_vtc_members(
-        &self,
-        vtc_id: &str,
-    ) -> Result<Vec<Player>, String> {
+    pub async fn get_vtc_members(&self, vtc_id: &str) -> Result<Vec<Player>, String> {
         if vtc_id.trim().is_empty() {
             return Ok(Vec::new());
         }
 
-        let url = format!(
-            "{TRUCKERSMP_API_URL}/vtc/{}/members",
-            vtc_id.trim()
-        );
+        let url = format!("{TRUCKERSMP_API_URL}/vtc/{}/members", vtc_id.trim());
 
         println!("RoadWatch VTC API request: {url}");
 
@@ -43,32 +37,21 @@ impl TruckersMpClient {
             .header("Accept", "application/json")
             .send()
             .await
-            .map_err(|error| {
-                format!("TruckersMP VTC request failed: {error}")
-            })?;
+            .map_err(|error| format!("TruckersMP VTC request failed: {error}"))?;
 
         let status = response.status();
 
         if !status.is_success() {
-            return Err(format!(
-                "TruckersMP VTC request returned HTTP {status}"
-            ));
+            return Err(format!("TruckersMP VTC request returned HTTP {status}"));
         }
 
         let payload: ApiResponse<VtcMembersResponse> = response
             .json()
             .await
-            .map_err(|error| {
-                format!(
-                    "Could not parse TruckersMP VTC members response: {error}"
-                )
-            })?;
+            .map_err(|error| format!("Could not parse TruckersMP VTC members response: {error}"))?;
 
         if payload.error {
-            return Err(
-                "TruckersMP API returned an error for this VTC."
-                    .to_string()
-            );
+            return Err("TruckersMP API returned an error for this VTC.".to_string());
         }
 
         println!(

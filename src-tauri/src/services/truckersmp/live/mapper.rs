@@ -2,10 +2,7 @@ use std::collections::HashMap;
 
 use crate::models::{LivePlayer, Player};
 
-pub fn apply_live_data(
-    player: &mut Player,
-    live_players: &[LivePlayer],
-) {
+pub fn apply_live_data(player: &mut Player, live_players: &[LivePlayer]) {
     let Some(live_player) = live_players
         .iter()
         .find(|item| item.truckersmp_id == player.truckersmp_id)
@@ -20,10 +17,7 @@ pub fn apply_live_data(
     player.live_position = live_player.position.clone();
 }
 
-pub fn apply_live_data_batch(
-    players: &mut [Player],
-    live_players: &[LivePlayer],
-) -> usize {
+pub fn apply_live_data_batch(players: &mut [Player], live_players: &[LivePlayer]) -> usize {
     let live_by_mp_id: HashMap<u64, &LivePlayer> = live_players
         .iter()
         .map(|live_player| (live_player.truckersmp_id, live_player))

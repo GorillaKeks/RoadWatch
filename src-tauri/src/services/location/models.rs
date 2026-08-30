@@ -1,15 +1,7 @@
 use serde::{Deserialize, Serialize};
 
 /// Supported games for location resolution.
-#[derive(
-    Debug,
-    Clone,
-    Copy,
-    PartialEq,
-    Eq,
-    Serialize,
-    Deserialize,
-)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
 pub enum Game {
     Ets2,
     Ats,

@@ -23,18 +23,14 @@ pub fn save_settings(settings: AppSettings) -> Result<AppSettings, String> {
     }
 
     if trimmed_truckersmp_id.is_empty() {
-        return Err(
-            "TruckersMP-ID must not be empty.".to_string()
-        );
+        return Err("TruckersMP-ID must not be empty.".to_string());
     }
 
     if !trimmed_truckersmp_id
         .chars()
         .all(|character| character.is_ascii_digit())
     {
-        return Err(
-            "TruckersMP-ID must contain numbers only.".to_string()
-        );
+        return Err("TruckersMP-ID must contain numbers only.".to_string());
     }
 
     let normalized = AppSettings {

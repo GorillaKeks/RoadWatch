@@ -5,12 +5,7 @@ use std::pin::Pin;
 use reqwest::Client;
 use serde::Deserialize;
 
-use crate::models::{
-    GameType,
-    LivePlayer,
-    LivePosition,
-    PlayerStatus,
-};
+use crate::models::{GameType, LivePlayer, LivePosition, PlayerStatus};
 
 use crate::services::truckersmp::server::TruckersMpServerService;
 
@@ -98,13 +93,11 @@ impl Ets2MapProvider {
         server_id: u64,
         server_name: &str,
     ) -> Result<Vec<LivePlayer>, String> {
-        let tracker_server_id =
-            Self::tracker_server_id(server_id);
+        let tracker_server_id = Self::tracker_server_id(server_id);
 
         println!(
             "RoadWatch ETS2Map provider: TMP server ID {} -> tracker ID {}.",
-            server_id,
-            tracker_server_id
+            server_id, tracker_server_id
         );
 
         let response = self
@@ -121,9 +114,7 @@ impl Ets2MapProvider {
             .send()
             .await
             .map_err(|error| {
-                format!(
-                    "ETS2Map provider request failed for server {server_id}: {error}"
-                )
+                format!("ETS2Map provider request failed for server {server_id}: {error}")
             })?;
 
         let status = response.status();
@@ -134,14 +125,9 @@ impl Ets2MapProvider {
             ));
         }
 
-        let payload: AreaResponse = response
-            .json()
-            .await
-            .map_err(|error| {
-                format!(
-                    "Could not parse ETS2Map response for server {server_id}: {error}"
-                )
-            })?;
+        let payload: AreaResponse = response.json().await.map_err(|error| {
+            format!("Could not parse ETS2Map response for server {server_id}: {error}")
+        })?;
 
         if !payload.success {
             return Ok(Vec::new());
@@ -160,12 +146,8 @@ impl Ets2MapProvider {
                     username: player.name,
                     status: PlayerStatus::Online,
                     game: Some(GameType::Ets2),
-                    server_id: player
-                        .server_id
-                        .or(Some(server_id)),
-                    server: Some(
-                        server_name.to_string(),
-                    ),
+                    server_id: player.server_id.or(Some(server_id)),
+                    server: Some(server_name.to_string()),
                     location: None,
                     position: Some(LivePosition {
                         x: player.x,
@@ -181,24 +163,17 @@ impl Ets2MapProvider {
         Ok(players)
     }
 
-    async fn fetch_live_players(
-        &self,
-    ) -> Result<Vec<LivePlayer>, String> {
-        let server_service =
-            TruckersMpServerService::new();
+    async fn fetch_live_players(&self) -> Result<Vec<LivePlayer>, String> {
+        let server_service = TruckersMpServerService::new();
 
-        let servers = server_service
-            .get_ets2_servers()
-            .await?;
+        let servers = server_service.get_ets2_servers().await?;
 
         println!(
             "RoadWatch ETS2Map provider: {} ETS2 servers found.",
             servers.len()
         );
 
-        let mut players_by_mp_id:
-            HashMap<u64, LivePlayer> =
-            HashMap::new();
+        let mut players_by_mp_id: HashMap<u64, LivePlayer> = HashMap::new();
 
         for server in servers {
             if !server.online {
@@ -207,15 +182,11 @@ impl Ets2MapProvider {
 
             println!(
                 "RoadWatch ETS2Map provider: checking {} (ID {}).",
-                server.name,
-                server.id
+                server.name, server.id
             );
 
             match self
-                .get_live_players_for_server(
-                    server.id,
-                    &server.name,
-                )
+                .get_live_players_for_server(server.id, &server.name)
                 .await
             {
                 Ok(players) => {
@@ -226,28 +197,20 @@ impl Ets2MapProvider {
                     );
 
                     for player in players {
-                        players_by_mp_id.insert(
-                            player.truckersmp_id,
-                            player,
-                        );
+                        players_by_mp_id.insert(player.truckersmp_id, player);
                     }
                 }
 
                 Err(error) => {
                     eprintln!(
                         "RoadWatch ETS2Map provider: skipping {} (ID {}): {}",
-                        server.name,
-                        server.id,
-                        error
+                        server.name, server.id, error
                     );
                 }
             }
         }
 
-        let players: Vec<LivePlayer> =
-            players_by_mp_id
-                .into_values()
-                .collect();
+        let players: Vec<LivePlayer> = players_by_mp_id.into_values().collect();
 
         println!(
             "RoadWatch ETS2Map provider: {} unique ETS2 players received.",
@@ -265,17 +228,8 @@ impl LivePlayerProvider for Ets2MapProvider {
 
     fn get_live_players(
         &self,
-    ) -> Pin<
-        Box<
-            dyn Future<
-                    Output = Result<Vec<LivePlayer>, String>,
-                > + Send
-                + '_,
-        >,
-    > {
-        Box::pin(async move {
-            self.fetch_live_players().await
-        })
+    ) -> Pin<Box<dyn Future<Output = Result<Vec<LivePlayer>, String>> + Send + '_>> {
+        Box::pin(async move { self.fetch_live_players().await })
     }
 }
 

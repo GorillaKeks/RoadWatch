@@ -20,25 +20,19 @@ pub async fn get_players() -> Result<Vec<Player>, String> {
 
     if settings.vtc_id.trim().is_empty() {
         return Err(
-            "Bitte zuerst eine TruckersMP VTC-ID in den Einstellungen speichern."
-                .to_string(),
+            "Bitte zuerst eine TruckersMP VTC-ID in den Einstellungen speichern.".to_string(),
         );
     }
 
     if settings.truckersmp_id.trim().is_empty() {
-        return Err(
-            "Bitte zuerst deine TruckersMP-ID in den Einstellungen speichern."
-                .to_string(),
-        );
+        return Err("Bitte zuerst deine TruckersMP-ID in den Einstellungen speichern.".to_string());
     }
 
     let own_truckersmp_id: u64 = settings
         .truckersmp_id
         .trim()
         .parse()
-        .map_err(|_| {
-            "Die gespeicherte TruckersMP-ID ist ungültig.".to_string()
-        })?;
+        .map_err(|_| "Die gespeicherte TruckersMP-ID ist ungültig.".to_string())?;
 
     println!(
         "RoadWatch: own TruckersMP ID from settings: {}",
@@ -47,20 +41,13 @@ pub async fn get_players() -> Result<Vec<Player>, String> {
 
     let client = TruckersMpClient::new();
 
-    let mut players = client
-        .get_vtc_members(&settings.vtc_id)
-        .await?;
+    let mut players = client.get_vtc_members(&settings.vtc_id).await?;
 
-    println!(
-        "RoadWatch VTC scan: {} members loaded.",
-        players.len()
-    );
+    println!("RoadWatch VTC scan: {} members loaded.", players.len());
 
     let live_client = TruckersMpLiveClient::new();
 
-    let mut live_players = live_client
-        .get_live_players()
-        .await?;
+    let mut live_players = live_client.get_live_players().await?;
 
     println!(
         "RoadWatch live scan: {} live players received.",
@@ -69,15 +56,12 @@ pub async fn get_players() -> Result<Vec<Player>, String> {
 
     match live_players
         .iter()
-        .find(|player| {
-            player.truckersmp_id == own_truckersmp_id
-        })
+        .find(|player| player.truckersmp_id == own_truckersmp_id)
     {
         Some(player) => {
             println!(
                 "RoadWatch own player FOUND in live data: {} (ID {}).",
-                player.username,
-                player.truckersmp_id
+                player.username, player.truckersmp_id
             );
 
             println!(
@@ -85,10 +69,7 @@ pub async fn get_players() -> Result<Vec<Player>, String> {
                 player.server_id
             );
 
-            println!(
-                "RoadWatch own player position: {:?}.",
-                player.position
-            );
+            println!("RoadWatch own player position: {:?}.", player.position);
         }
 
         None => {
@@ -110,8 +91,7 @@ pub async fn get_players() -> Result<Vec<Player>, String> {
         live_players.len()
     );
 
-    let online_count =
-        apply_live_data_batch(&mut players, &live_players);
+    let online_count = apply_live_data_batch(&mut players, &live_players);
 
     println!(
         "RoadWatch matching complete: {} of {} VTC members are online.",
@@ -119,11 +99,7 @@ pub async fn get_players() -> Result<Vec<Player>, String> {
         players.len()
     );
 
-    calculate_player_distances(
-        &mut players,
-        &live_players,
-        own_truckersmp_id,
-    );
+    calculate_player_distances(&mut players, &live_players, own_truckersmp_id);
 
     Ok(players)
 }
@@ -135,9 +111,7 @@ fn calculate_player_distances(
 ) {
     let own_live_player = live_players
         .iter()
-        .find(|player| {
-            player.truckersmp_id == own_truckersmp_id
-        });
+        .find(|player| player.truckersmp_id == own_truckersmp_id);
 
     let Some(own_live_player) = own_live_player else {
         println!(
@@ -168,10 +142,7 @@ fn calculate_player_distances(
 
     println!(
         "RoadWatch distance calculation: own player {} found at X={} Y={}, game={:?}.",
-        own_live_player.username,
-        own_position.x,
-        own_position.y,
-        own_game
+        own_live_player.username, own_position.x, own_position.y, own_game
     );
 
     let mut calculated_count = 0usize;
@@ -189,8 +160,7 @@ fn calculate_player_distances(
             continue;
         }
 
-        let Some(player_position) = player.live_position.as_ref()
-        else {
+        let Some(player_position) = player.live_position.as_ref() else {
             continue;
         };
 
@@ -231,20 +201,14 @@ fn calculate_player_distances(
     );
 }
 
-fn same_game(
-    first: &GameType,
-    second: &GameType,
-) -> bool {
+fn same_game(first: &GameType, second: &GameType) -> bool {
     matches!(
         (first, second),
-        (GameType::Ets2, GameType::Ets2)
-            | (GameType::Ats, GameType::Ats)
+        (GameType::Ets2, GameType::Ets2) | (GameType::Ats, GameType::Ats)
     )
 }
 
-fn game_name(
-    game: &GameType,
-) -> &'static str {
+fn game_name(game: &GameType) -> &'static str {
     match game {
         GameType::Ets2 => "ETS2",
         GameType::Ats => "ATS",
@@ -253,33 +217,23 @@ fn game_name(
 
 /// Calculates straight-line distance between two game-world
 /// positions and converts it to real-world kilometres.
-fn calculate_distance_km(
-    x1: f64,
-    y1: f64,
-    x2: f64,
-    y2: f64,
-    game: &GameType,
-) -> f64 {
+fn calculate_distance_km(x1: f64, y1: f64, x2: f64, y2: f64, game: &GameType) -> f64 {
     let dx = x2 - x1;
     let dy = y2 - y1;
 
-    let game_distance_m =
-        (dx * dx + dy * dy).sqrt();
+    let game_distance_m = (dx * dx + dy * dy).sqrt();
 
     let map_scale = match game {
         GameType::Ets2 => ETS2_MAP_SCALE,
         GameType::Ats => ATS_MAP_SCALE,
     };
 
-    let real_distance_m =
-        game_distance_m * map_scale;
+    let real_distance_m = game_distance_m * map_scale;
 
     real_distance_m / 1000.0
 }
 
-fn format_distance(
-    distance_km: f64,
-) -> String {
+fn format_distance(distance_km: f64) -> String {
     if distance_km < 1.0 {
         format!("{:.0} m", distance_km * 1000.0)
     } else if distance_km < 10.0 {

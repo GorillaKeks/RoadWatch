@@ -3,11 +3,9 @@ use serde::Serialize;
 use std::fs;
 use std::path::Path;
 
-const SOURCE_FILE: &str =
-    r"C:\Projekte\RoadSync\MapData\ETS2\europe-cities.json";
+const SOURCE_FILE: &str = r"C:\Projekte\RoadSync\MapData\ETS2\europe-cities.json";
 
-const OUTPUT_FILE: &str =
-    "src/services/location/data/ets2-cities.json";
+const OUTPUT_FILE: &str = "src/services/location/data/ets2-cities.json";
 
 #[derive(Debug, Deserialize)]
 struct SourceCity {
@@ -40,17 +38,12 @@ fn main() {
     }
 
     println!("Reading source file...");
-    let json = fs::read_to_string(SOURCE_FILE)
-        .expect("Failed to read source file");
+    let json = fs::read_to_string(SOURCE_FILE).expect("Failed to read source file");
 
     let source_cities: Vec<SourceCity> =
-        serde_json::from_str(&json)
-            .expect("Failed to parse source JSON");
+        serde_json::from_str(&json).expect("Failed to parse source JSON");
 
-    println!(
-        "Found {} cities.",
-        source_cities.len()
-    );
+    println!("Found {} cities.", source_cities.len());
 
     let cities: Vec<RoadWatchCity> = source_cities
         .into_iter()
@@ -63,18 +56,15 @@ fn main() {
         })
         .collect();
 
-    let output = serde_json::to_string_pretty(&cities)
-        .expect("Failed to serialize city data");
+    let output = serde_json::to_string_pretty(&cities).expect("Failed to serialize city data");
 
     let output_path = Path::new(OUTPUT_FILE);
 
     if let Some(parent) = output_path.parent() {
-        fs::create_dir_all(parent)
-            .expect("Failed to create output directory");
+        fs::create_dir_all(parent).expect("Failed to create output directory");
     }
 
-    fs::write(output_path, output)
-        .expect("Failed to write output file");
+    fs::write(output_path, output).expect("Failed to write output file");
 
     println!();
     println!("Conversion complete!");
@@ -126,10 +116,7 @@ fn format_country(token: &str) -> String {
                 let mut chars = word.chars();
 
                 match chars.next() {
-                    Some(first) => {
-                        first.to_uppercase().collect::<String>()
-                            + chars.as_str()
-                    }
+                    Some(first) => first.to_uppercase().collect::<String>() + chars.as_str(),
                     None => String::new(),
                 }
             })

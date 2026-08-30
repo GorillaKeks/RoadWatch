@@ -11,12 +11,5 @@ pub trait LivePlayerProvider: Send + Sync {
 
     fn get_live_players(
         &self,
-    ) -> Pin<
-        Box<
-            dyn Future<
-                    Output = Result<Vec<LivePlayer>, String>,
-                > + Send
-                + '_,
-        >,
-    >;
+    ) -> Pin<Box<dyn Future<Output = Result<Vec<LivePlayer>, String>> + Send + '_>>;
 }

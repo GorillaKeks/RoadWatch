@@ -28,8 +28,7 @@ impl SettingsStore {
         let content = fs::read_to_string(&path)
             .map_err(|error| format!("Could not read settings: {error}"))?;
 
-        serde_json::from_str(&content)
-            .map_err(|error| format!("Could not parse settings: {error}"))
+        serde_json::from_str(&content).map_err(|error| format!("Could not parse settings: {error}"))
     }
 
     pub fn save(settings: &AppSettings) -> Result<(), String> {
@@ -38,7 +37,6 @@ impl SettingsStore {
         let content = serde_json::to_string_pretty(settings)
             .map_err(|error| format!("Could not serialize settings: {error}"))?;
 
-        fs::write(path, content)
-            .map_err(|error| format!("Could not save settings: {error}"))
+        fs::write(path, content).map_err(|error| format!("Could not save settings: {error}"))
     }
 }

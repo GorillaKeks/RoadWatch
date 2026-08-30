@@ -2,11 +2,7 @@ use std::collections::HashMap;
 
 use crate::models::LivePlayer;
 
-use super::{
-    AtsMapProvider,
-    Ets2MapProvider,
-    LivePlayerProvider,
-};
+use super::{AtsMapProvider, Ets2MapProvider, LivePlayerProvider};
 
 /// Coordinates all configured live player providers.
 ///
@@ -23,9 +19,7 @@ impl TruckersMpLiveClient {
             Box::new(AtsMapProvider::new()),
         ];
 
-        Self {
-            providers,
-        }
+        Self { providers }
     }
 
     /// Collects live players from all configured providers.
@@ -34,11 +28,8 @@ impl TruckersMpLiveClient {
     /// duplicate results from multiple providers are avoided.
     ///
     /// If one provider fails, the remaining providers are still queried.
-    pub async fn get_live_players(
-        &self,
-    ) -> Result<Vec<LivePlayer>, String> {
-        let mut players_by_mp_id:
-            HashMap<u64, LivePlayer> = HashMap::new();
+    pub async fn get_live_players(&self) -> Result<Vec<LivePlayer>, String> {
+        let mut players_by_mp_id: HashMap<u64, LivePlayer> = HashMap::new();
 
         let mut successful_providers = 0usize;
         let mut errors: Vec<String> = Vec::new();
@@ -58,10 +49,7 @@ impl TruckersMpLiveClient {
                     );
 
                     for player in players {
-                        players_by_mp_id.insert(
-                            player.truckersmp_id,
-                            player,
-                        );
+                        players_by_mp_id.insert(player.truckersmp_id, player);
                     }
 
                     successful_providers += 1;
@@ -74,21 +62,14 @@ impl TruckersMpLiveClient {
                         error
                     );
 
-                    errors.push(format!(
-                        "{}: {}",
-                        provider.name(),
-                        error
-                    ));
+                    errors.push(format!("{}: {}", provider.name(), error));
                 }
             }
         }
 
         if successful_providers == 0 {
             if errors.is_empty() {
-                return Err(
-                    "No live player providers are configured."
-                        .to_string(),
-                );
+                return Err("No live player providers are configured.".to_string());
             }
 
             return Err(format!(
@@ -97,15 +78,10 @@ impl TruckersMpLiveClient {
             ));
         }
 
-        let mut players: Vec<LivePlayer> =
-            players_by_mp_id
-                .into_values()
-                .collect();
+        let mut players: Vec<LivePlayer> = players_by_mp_id.into_values().collect();
 
         // Keep the result order stable and predictable.
-        players.sort_by_key(
-            |player| player.truckersmp_id,
-        );
+        players.sort_by_key(|player| player.truckersmp_id);
 
         println!(
             "RoadWatch live client: {} unique live players received from all providers.",

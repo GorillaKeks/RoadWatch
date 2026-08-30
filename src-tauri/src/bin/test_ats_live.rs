@@ -1,8 +1,7 @@
 use reqwest::Client;
 use serde::Deserialize;
 
-const LIVE_AREA_URL: &str =
-    "https://tracker.ets2map.com/v3/area";
+const LIVE_AREA_URL: &str = "https://tracker.ets2map.com/v3/area";
 
 #[derive(Debug, Deserialize)]
 struct AreaResponse {
@@ -65,8 +64,7 @@ async fn main() {
     for (tracker_server_id, server_name) in servers {
         println!(
             "Testing ATS server: {} (Tracker ID {})",
-            server_name,
-            tracker_server_id
+            server_name, tracker_server_id
         );
 
         let response = match client
@@ -99,35 +97,25 @@ async fn main() {
             continue;
         }
 
-        let payload: AreaResponse =
-            match response.json().await {
-                Ok(payload) => payload,
+        let payload: AreaResponse = match response.json().await {
+            Ok(payload) => payload,
 
-                Err(error) => {
-                    println!(
-                        "Could not parse response: {error}"
-                    );
+            Err(error) => {
+                println!("Could not parse response: {error}");
 
-                    println!();
-                    continue;
-                }
-            };
+                println!();
+                continue;
+            }
+        };
 
         println!("Success: {}", payload.success);
 
-        println!(
-            "Players returned: {}",
-            payload.data.len()
-        );
+        println!("Players returned: {}", payload.data.len());
 
         for player in payload.data.iter().take(10) {
             println!(
                 "  {} | MP ID {} | X={} Y={} | Server={:?}",
-                player.name,
-                player.mp_id,
-                player.x,
-                player.y,
-                player.server_id
+                player.name, player.mp_id, player.x, player.y, player.server_id
             );
         }
 

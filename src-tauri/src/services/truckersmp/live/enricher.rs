@@ -32,27 +32,19 @@ impl LiveEnricher {
         for server in ets2_servers {
             println!(
                 "RoadWatch server registry: ETS2 server {} (ID {}).",
-                server.name,
-                server.id
+                server.name, server.id
             );
 
-            self.servers.insert(
-                server.id,
-                server.name,
-            );
+            self.servers.insert(server.id, server.name);
         }
 
         for server in ats_servers {
             println!(
                 "RoadWatch server registry: ATS server {} (ID {}).",
-                server.name,
-                server.id
+                server.name, server.id
             );
 
-            self.servers.insert(
-                server.id,
-                server.name,
-            );
+            self.servers.insert(server.id, server.name);
         }
 
         println!(
@@ -66,11 +58,8 @@ impl LiveEnricher {
     /// Enriches a live player with server name and location.
     pub fn enrich(&self, player: &mut LivePlayer) {
         if let Some(server_id) = player.server_id {
-            if let Some(server_name) =
-                self.servers.get(&server_id)
-            {
-                player.server =
-                    Some(server_name.clone());
+            if let Some(server_name) = self.servers.get(&server_id) {
+                player.server = Some(server_name.clone());
             }
         }
 
@@ -88,20 +77,15 @@ impl LiveEnricher {
             crate::models::GameType::Ats => Game::Ats,
         };
 
-        let location = self.location_service.resolve(
-            location_game,
-            position.x,
-            position.y,
-        );
+        let location = self
+            .location_service
+            .resolve(location_game, position.x, position.y);
 
         player.location = Some(location);
     }
 
     /// Enriches all live players.
-    pub fn enrich_batch(
-        &self,
-        players: &mut [LivePlayer],
-    ) {
+    pub fn enrich_batch(&self, players: &mut [LivePlayer]) {
         for player in players {
             self.enrich(player);
         }
