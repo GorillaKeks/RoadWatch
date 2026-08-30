@@ -1,5 +1,4 @@
 import { MapPin } from "lucide-react";
-import { useTranslation } from "react-i18next";
 import type { Player } from "../../types/player";
 
 interface PlayerCardProps {
@@ -9,8 +8,6 @@ interface PlayerCardProps {
 export function PlayerCard({
   player,
 }: PlayerCardProps) {
-  const { t } = useTranslation();
-
   const initial = player.username
     .replace(/[^a-zA-Z0-9]/g, "")
     .charAt(0)
@@ -25,8 +22,8 @@ export function PlayerCard({
 
   const statusLabel =
     player.status === "online"
-      ? t("dashboard.online")
-      : t("dashboard.offline");
+      ? "Online"
+      : "Offline";
 
   return (
     <article className="player-card">

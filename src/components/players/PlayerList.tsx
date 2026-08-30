@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import type { Player } from "../../types/player";
 import { PlayerCard } from "./PlayerCard";
 
@@ -6,7 +5,9 @@ interface PlayerListProps {
   players: Player[];
 }
 
-function getDistanceInKm(distance: string | null | undefined): number {
+function getDistanceInKm(
+  distance: string | null | undefined,
+): number {
   if (!distance) {
     return Number.POSITIVE_INFINITY;
   }
@@ -16,7 +17,8 @@ function getDistanceInKm(distance: string | null | undefined): number {
     .trim()
     .toLowerCase();
 
-  const value = Number.parseFloat(normalized);
+  const value =
+    Number.parseFloat(normalized);
 
   if (!Number.isFinite(value)) {
     return Number.POSITIVE_INFINITY;
@@ -29,28 +31,36 @@ function getDistanceInKm(distance: string | null | undefined): number {
   return value;
 }
 
-function sortPlayers(players: Player[]): Player[] {
+function sortPlayers(
+  players: Player[],
+): Player[] {
   return [...players].sort((a, b) => {
-    const aOnline = a.status === "online";
-    const bOnline = b.status === "online";
+    const aOnline =
+      a.status === "online";
 
-    // Online-Spieler immer vor Offline-Spielern.
+    const bOnline =
+      b.status === "online";
+
+    // Always show online players first.
     if (aOnline !== bOnline) {
       return aOnline ? -1 : 1;
     }
 
-    // Bei Online-Spielern nach Entfernung sortieren.
+    // Sort online players by distance.
     if (aOnline && bOnline) {
-      const distanceA = getDistanceInKm(a.distance);
-      const distanceB = getDistanceInKm(b.distance);
+      const distanceA =
+        getDistanceInKm(a.distance);
+
+      const distanceB =
+        getDistanceInKm(b.distance);
 
       if (distanceA !== distanceB) {
         return distanceA - distanceB;
       }
     }
 
-    // Bei gleicher Entfernung bzw. Offline:
-    // alphabetisch nach Benutzername.
+    // Sort equal distances and offline players
+    // alphabetically by username.
     return a.username.localeCompare(
       b.username,
       undefined,
@@ -59,20 +69,21 @@ function sortPlayers(players: Player[]): Player[] {
   });
 }
 
-export function PlayerList({ players }: PlayerListProps) {
-  const { t } = useTranslation();
-
+export function PlayerList({
+  players,
+}: PlayerListProps) {
   if (players.length === 0) {
     return (
       <section className="player-list">
         <div className="empty-state">
-          {t("players.empty")}
+          No players found.
         </div>
       </section>
     );
   }
 
-  const sortedPlayers = sortPlayers(players);
+  const sortedPlayers =
+    sortPlayers(players);
 
   return (
     <section className="player-list">

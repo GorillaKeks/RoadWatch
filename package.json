@@ -1,7 +1,7 @@
 {
   "name": "roadwatch",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,12 +13,9 @@
     "@tauri-apps/api": "^2",
     "@tauri-apps/plugin-opener": "^2",
     "@tauri-apps/plugin-updater": "^2.10.1",
-    "i18next": "^26.4.0",
-    "i18next-browser-languagedetector": "^8.2.1",
     "lucide-react": "^1.33.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-i18next": "^17.0.12"
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^2",

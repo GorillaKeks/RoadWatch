@@ -11,10 +11,6 @@ import {
   Settings,
 } from "lucide-react";
 
-import {
-  useTranslation,
-} from "react-i18next";
-
 import { AppHeader } from "../components/layout/AppHeader";
 import { PlayerList } from "../components/players/PlayerList";
 import { PlayerSearch } from "../components/players/PlayerSearch";
@@ -48,13 +44,10 @@ import {
   getSettings,
 } from "../services/tauri/settingsService";
 
-
-const PLAYER_REFRESH_INTERVAL_MS = 60_000;
-
+const PLAYER_REFRESH_INTERVAL_MS =
+  60_000;
 
 function App() {
-  const { t } = useTranslation();
-
   const [searchTerm, setSearchTerm] =
     useState("");
 
@@ -93,15 +86,12 @@ function App() {
   const isRequestRunningRef =
     useRef(false);
 
-
   const getLastUpdatedText = useCallback(
     (
       updated: Date | null,
     ): string => {
       if (!updated) {
-        return t(
-          "dashboard.notUpdatedYet",
-        );
+        return "Not updated yet";
       }
 
       const secondsAgo = Math.max(
@@ -115,18 +105,11 @@ function App() {
       );
 
       if (secondsAgo < 5) {
-        return t(
-          "dashboard.updatedJustNow",
-        );
+        return "updated just now";
       }
 
       if (secondsAgo < 60) {
-        return t(
-          "dashboard.updatedSecondsAgo",
-          {
-            count: secondsAgo,
-          },
-        );
+        return `updated ${secondsAgo} seconds ago`;
       }
 
       const minutesAgo = Math.floor(
@@ -134,18 +117,11 @@ function App() {
       );
 
       if (minutesAgo === 1) {
-        return t(
-          "dashboard.updatedOneMinuteAgo",
-        );
+        return "updated 1 minute ago";
       }
 
       if (minutesAgo < 60) {
-        return t(
-          "dashboard.updatedMinutesAgo",
-          {
-            count: minutesAgo,
-          },
-        );
+        return `updated ${minutesAgo} minutes ago`;
       }
 
       const hoursAgo = Math.floor(
@@ -153,21 +129,13 @@ function App() {
       );
 
       if (hoursAgo === 1) {
-        return t(
-          "dashboard.updatedOneHourAgo",
-        );
+        return "updated 1 hour ago";
       }
 
-      return t(
-        "dashboard.updatedHoursAgo",
-        {
-          count: hoursAgo,
-        },
-      );
+      return `updated ${hoursAgo} hours ago`;
     },
-    [t],
+    [],
   );
-
 
   useEffect(() => {
     getBackendStatus()
@@ -178,7 +146,6 @@ function App() {
         ),
       );
   }, []);
-
 
   const loadPlayers = useCallback(
     async (
@@ -240,22 +207,18 @@ function App() {
         );
 
         setPlayerError(
-          t(
-            "dashboard.playerUpdateError",
-          ),
+          "Player data could not be updated.",
         );
       } finally {
         setIsLoadingPlayers(false);
-
         setIsRefreshingPlayers(false);
 
         isRequestRunningRef.current =
           false;
       }
     },
-    [t],
+    [],
   );
-
 
   useEffect(() => {
     void loadPlayers(true);
@@ -275,7 +238,6 @@ function App() {
     };
   }, [loadPlayers]);
 
-
   useEffect(() => {
     const intervalId =
       window.setInterval(
@@ -293,7 +255,6 @@ function App() {
       );
     };
   }, []);
-
 
   const filteredPlayers = useMemo(() => {
     return players.filter(
@@ -334,32 +295,28 @@ function App() {
     statusFilter,
   ]);
 
-
   const onlineCount =
     players.filter(
       (player) =>
         player.status === "online",
     ).length;
 
-
   const lastUpdatedText =
     getLastUpdatedText(
       lastUpdated,
     );
 
-
   if (showSettings) {
     return (
       <main className="app-shell">
         <SettingsPage
-  onBack={() =>
-    setShowSettings(false)
-  }
-/>
+          onBack={() =>
+            setShowSettings(false)
+          }
+        />
       </main>
     );
   }
-
 
   return (
     <main className="app-shell">
@@ -387,13 +344,13 @@ function App() {
 
             <span className="live-status-label">
               {isRefreshingPlayers
-                ? "Aktualisiere"
+                ? "Refreshing"
                 : "Live"}
             </span>
 
             <span className="live-status-time">
               {isRefreshingPlayers
-                ? "Daten werden aktualisiert..."
+                ? "Updating data..."
                 : lastUpdatedText}
             </span>
 
@@ -407,8 +364,8 @@ function App() {
                 isRefreshingPlayers ||
                 isRequestRunningRef.current
               }
-              title="Jetzt aktualisieren"
-              aria-label="Jetzt aktualisieren"
+              title="Refresh now"
+              aria-label="Refresh now"
             >
               <RefreshCw
                 size={17}
@@ -420,7 +377,7 @@ function App() {
               />
 
               <span>
-                Aktualisieren
+                Refresh
               </span>
             </button>
           </div>
@@ -439,21 +396,16 @@ function App() {
           onClick={() =>
             setShowSettings(true)
           }
-          title="Einstellungen"
-          aria-label="Einstellungen"
+          title="Settings"
+          aria-label="Settings"
         >
           <Settings size={20} />
         </button>
       </div>
 
-
       {currentPlayer && (
         <section className="current-player-section">
-          <h2>
-            {t(
-              "dashboard.currentPlayer",
-            )}
-          </h2>
+          <h2>My Driver</h2>
 
           <PlayerCard
             player={currentPlayer}
@@ -461,13 +413,8 @@ function App() {
         </section>
       )}
 
-
       <section className="vtc-members-section">
-        <h2>
-          {t(
-            "dashboard.members",
-          )}
-        </h2>
+        <h2>VTC Members</h2>
 
         <section className="controls">
           <PlayerSearch
@@ -481,16 +428,12 @@ function App() {
           />
         </section>
 
-
         {isLoadingPlayers &&
           players.length === 0 && (
             <div className="empty-state">
-              {t(
-                "dashboard.loadingPlayers",
-              )}
+              Loading player data...
             </div>
           )}
-
 
         {playerError &&
           players.length === 0 && (
@@ -499,14 +442,12 @@ function App() {
             </div>
           )}
 
-
         {!isLoadingPlayers &&
           players.length > 0 && (
             <PlayerList
               players={filteredPlayers}
             />
           )}
-
 
         {!isLoadingPlayers &&
           !playerError &&
@@ -519,6 +460,5 @@ function App() {
     </main>
   );
 }
-
 
 export default App;
