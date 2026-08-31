@@ -1,192 +1,182 @@
 # 🚛 RoadWatch
 
-**RoadWatch** is a modern desktop application for monitoring Virtual Trucking Companies (VTCs) and their members in real time.
+**RoadWatch** is a modern desktop application for monitoring Virtual Trucking Companies (VTCs) and their members on TruckersMP.
 
-The application combines live player data with information from the TruckersMP API to provide an overview of VTC members who are currently online.
+It combines live player data with VTC information to provide a clear overview of members who are currently online and active on the road.
 
 RoadWatch is designed to be lightweight, fast, and easy to use.
 
-> 🚧 **RoadWatch is currently in active development. Features and functionality may change as development progresses.**
+> 🚧 **Current version: v0.1.3**
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-### 👥 VTC Member Monitoring
+## 👥 VTC & Live Player Monitoring
 
-RoadWatch can load and process members directly from the TruckersMP VTC API.
+RoadWatch connects VTC member information with live player data.
 
 Current functionality includes:
 
-* Loading VTC members
-* Displaying VTC member information
-* Matching VTC members with live player data
-* Detecting currently online members
-* Displaying online and offline status
+- Loading and processing VTC members via the TruckersMP API
+- Displaying VTC member information
+- Matching VTC members with live player data
+- Detecting online and offline members
+- Live player detection and position processing
+- ETS2 and ATS detection
+- TruckersMP server detection and mapping
 
 ---
 
-### 🌐 Live Player Tracking
+## 📍 Locations & Distance System
 
-RoadWatch retrieves live player information from supported tracking services.
+RoadWatch processes player positions and location information to provide distance-based monitoring.
 
-Current functionality includes:
+Features include:
 
-* Live player detection
-* Player position processing
-* Online player matching
-* TruckersMP server detection
-* Server mapping
+- Player position processing
+- Location and city matching
+- Game and server information
+- Distance calculation between compatible players
+- Distance display and sorting
+- Distance filtering
 
----
+### Available Distance Filters
 
-### 🎮 Game Detection
+- All distances
+- Under 50 km
+- Under 100 km
+- Under 250 km
+- Under 500 km
 
-When live data is available, RoadWatch can associate players with their current game.
-
-The project supports TruckersMP environments including:
-
-* **Euro Truck Simulator 2**
-* **American Truck Simulator**
-
-Game-specific functionality may vary depending on the available live data source.
+> ℹ️ Distance calculations depend on available position data and are only performed when players are compatible for comparison.
 
 ---
 
-### 📍 Player Locations
+## 🔎 Search & Filtering
 
-RoadWatch processes player coordinates and prepares them for location-based features.
+RoadWatch provides tools to quickly find relevant players.
 
-Current and planned functionality includes:
-
-* Player position information
-* City and location matching
-* More detailed player location information
-* Server information
-
-Location accuracy depends on the data provided by external services.
+- Player search
+- Online/offline filtering
+- Distance filtering
+- Distance-based sorting
 
 ---
 
-### 📏 Distance System
+## 🔄 Live Refresh
 
-RoadWatch includes distance-based player monitoring.
+RoadWatch supports automatic and manual live data updates.
 
-When compatible position data is available, the application can calculate distances between players.
+Features include:
 
-Distance calculations are only performed when both players are in the same game.
-
-The distance system is being expanded with additional features such as sorting and filtering.
-
----
-
-### 🔄 Live Refresh
-
-RoadWatch includes a foundation for refreshing live player data.
-
-The refresh system is being expanded to provide a more complete real-time experience.
-
-Planned improvements include:
-
-* Improved automatic refresh
-* Live status indicators
-* Last update timestamps
-* Loading indicators
-* Improved error handling
+- Manual refresh
+- Automatic refresh
+- Player position updates
+- Distance updates
+- Live status indicator
+- Last update information
+- Refresh loading indicator
+- Refresh error handling
 
 ---
 
-### 🖥️ Modern Desktop Application
+## ⚙️ Settings & Updates
 
-RoadWatch is built as a modern desktop application using:
+RoadWatch includes:
 
-* **Tauri**
-* **Rust**
-* **React**
-* **TypeScript**
-* **Vite**
+- Integrated application settings
+- Supported service configuration
+- Automatic update checking
+- Update downloading and installation
+- Signed updater artifacts
 
-This technology stack provides a lightweight and fast alternative to traditional desktop frameworks.
+The automatic update system has been successfully tested with:
 
----
-
-## 🚀 Current Development Status
-
-RoadWatch is currently in active development.
-
-### Currently Implemented
-
-* TruckersMP VTC member loading
-* VTC member processing
-* Live player data integration
-* ETS2Map integration
-* Online/offline member matching
-* Player game detection
-* Player position processing
-* Location data processing
-* Distance calculation
-* TruckersMP server detection
-* Server mapping
-* Settings management
-* Modern Tauri desktop architecture
+**RoadWatch v0.1.2 → v0.1.3**
 
 ---
 
-## 🗺️ Roadmap
+# 🖥️ Technology
 
-The following features are planned or currently being developed for RoadWatch.
+RoadWatch is built using:
 
-### 🔄 Live Refresh
+- **Tauri**
+- **Rust**
+- **React**
+- **TypeScript**
+- **Vite**
 
-* [x] Manual refresh functionality
-* [x] Automatic player data refresh foundation
-* [x] Player position updates
-* [x] Distance calculation updates
-* [ ] Complete automatic refresh system
-* [ ] Add live status indicators
-* [ ] Add last update timestamps
-* [ ] Improve loading indicators
-* [ ] Improve error handling
-
-### 📏 Distance System
-
-* [x] Distance calculation foundation
-* [x] Player distance processing
-* [ ] Distance-based player sorting
-* [ ] Distance filtering
-* [ ] Automatic distance updates
-* [ ] Improved distance accuracy
-
-### 👤 Player Details
-
-* [ ] Dedicated player detail view
-* [ ] More detailed location information
-* [ ] Game information
-* [ ] Server information
-* [ ] Additional TruckersMP player details
-
-### 🌐 Live Player Data
-
-* [x] TruckersMP VTC member loading
-* [x] Live player data integration
-* [x] Online/offline member matching
-* [x] Player game detection
-* [x] Player position processing
-* [x] TruckersMP server detection
-* [x] Server mapping
-
-### 🔮 Future Ideas
-
-* [ ] Expanded player monitoring
-* [ ] Additional filtering options
-* [ ] Improved VTC statistics
-* [ ] Savegame-related tools
+This architecture provides a lightweight, fast, and modern desktop application.
 
 ---
 
-## 🏗️ Architecture
+# 🚀 Current Development Status
 
-RoadWatch uses a modern frontend and backend architecture.
+## RoadWatch v0.1.3
+
+### Implemented
+
+- [x] TruckersMP VTC member integration
+- [x] Live player data integration
+- [x] ETS2Map integration
+- [x] Online/offline member matching
+- [x] ETS2 and ATS detection
+- [x] Player position and location processing
+- [x] Distance calculation, sorting, and filtering
+- [x] Automatic distance updates
+- [x] TruckersMP server detection
+- [x] Player search and status filtering
+- [x] Manual and automatic refresh
+- [x] Live status and last update information
+- [x] Loading and error handling
+- [x] Settings management
+- [x] Automatic application updates
+- [x] Signed updater artifacts
+
+---
+
+# 🗺️ Roadmap
+
+## 🚛 RoadWatch V1.0 – Complete UI Rebuild
+
+The next major version will introduce a complete redesign of RoadWatch.
+
+Instead of continuing to extend the current interface, **RoadWatch V1.0** will rebuild the user interface cleanly from the ground up.
+
+### Planned Areas
+
+- 🎨 Complete new application design
+- 📊 Redesigned Dashboard
+- 🗺️ Live Map with map material
+- 👥 Redesigned Players section
+- 🏢 Dedicated VTC section
+- 🖥️ Dedicated Server section
+- 📍 Advanced player location visualization
+- 👤 Player detail view
+- 🎯 Improved navigation and user experience
+- 🧩 Cleaner component architecture
+- 🎨 Separate styles for major application areas
+
+> **The goal is a clean V1.0 architecture without legacy UI patches.**
+
+---
+
+## 🔮 Future Ideas
+
+Possible future features include:
+
+- Expanded player monitoring
+- Advanced player details
+- Improved VTC statistics
+- Additional filtering options
+- Map-based player visualization
+- Savegame-related tools
+- Additional TruckersMP data integration
+
+---
+
+# 🏗️ Architecture
 
 ```text
 RoadWatch
@@ -196,7 +186,9 @@ RoadWatch
 │   ├── TypeScript
 │   ├── Vite
 │   ├── Components
-│   └── Services
+│   ├── Services
+│   ├── Types
+│   └── Utilities
 │
 ├── Backend
 │   ├── Rust
@@ -210,87 +202,113 @@ RoadWatch
 
 ---
 
-## 🌐 Data Sources
+# 🌐 Data Sources
 
-RoadWatch uses external services to retrieve player and VTC information.
+RoadWatch uses external services to retrieve VTC and live player information.
 
-### TruckersMP API
-
-Used for:
-
-* VTC information
-* VTC member data
-* Player-related information
-
-### ETS2Map
+## TruckersMP API
 
 Used for:
 
-* Live player data
-* Player positions
-* Online player detection
-* Server information
+- VTC information
+- VTC member data
+- Player-related information
 
-RoadWatch does not own or control these external services.
+## ETS2Map
+
+Used for:
+
+- Live player data
+- Player positions
+- Online player detection
+- Server information
+
+> ℹ️ RoadWatch does not own or control these external services. Data availability and accuracy depend on the respective services.
 
 ---
 
-## 🛠️ Development Setup
+# 📦 Installation
 
-### Requirements
+Download the latest RoadWatch release from the project's **GitHub Releases** page and install the application using the provided Windows installer.
 
-You will need:
+RoadWatch supports automatic updates for future releases.
 
-* Node.js
-* npm
-* Rust
-* Cargo
-* Tauri development environment
+---
 
-### Install Dependencies
+# 🛠️ Development Setup
+
+## Requirements
+
+Before building RoadWatch, make sure the following tools are installed:
+
+- Node.js
+- npm
+- Rust
+- Cargo
+- Tauri development environment
+
+## Install Dependencies
 
 ```bash
 npm install
 ```
 
-### Start Development Mode
+## Start Development Mode
 
 ```bash
 npm run tauri dev
 ```
 
-### Build the Application
+## Build the Application
 
 ```bash
 npm run tauri build
 ```
 
+The Windows installer is generated in:
+
+```text
+src-tauri/target/release/bundle/nsis/
+```
+
 ---
 
-## ⚠️ Disclaimer
+# 🔄 Updating
+
+RoadWatch uses the **Tauri updater system**.
+
+A release update requires:
+
+- A new application version
+- A signed installer
+- A `.sig` signature file
+- An updated `latest.json`
+- A GitHub Release containing the required update artifacts
+
+---
+
+# ⚠️ Disclaimer
 
 RoadWatch is an independent community project.
 
-It is not affiliated with, endorsed by, or officially connected to:
+It is **not affiliated with, endorsed by, or officially connected to**:
 
-* TruckersMP
-* SCS Software
-* ETS2Map
+- TruckersMP
+- SCS Software
+- ETS2Map
 
-All trademarks and game names belong to their respective owners.
-
----
-
-## 🚧 Development
-
-RoadWatch is currently under active development.
-
-New features, improvements, and changes are continuously being added.
-
-The project focuses on creating a fast, modern, and user-friendly desktop application for monitoring TruckersMP VTC activity.
+All trademarks, game names, logos, and related assets belong to their respective owners.
 
 ---
 
-## 🚛 RoadWatch
+# 🚧 Development
 
-**Track your VTC. See who's on the road.**
+RoadWatch v0.1.x establishes the technical foundation of the application.
+
+The next major milestone is:
+
+# 🚛 RoadWatch V1.0
+
+## Complete UI Rebuild
+
+**Track your VTC. See who's on the road. 🚛**
