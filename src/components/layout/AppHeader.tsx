@@ -3,29 +3,23 @@ interface AppHeaderProps {
   onlineCount: number;
 }
 
-export function AppHeader({
-  memberCount,
-  onlineCount,
-}: AppHeaderProps) {
+export function AppHeader({ memberCount, onlineCount }: AppHeaderProps) {
   return (
     <header className="app-header">
-      <h1>ROADWATCH</h1>
+      <h1>
+        <span className="brand-road">ROAD</span>
+        <span className="brand-watch">WATCH</span>
+      </h1>
 
       <div className="statistics">
         <span>
-          VTC Members:{" "}
-          <strong>{memberCount}</strong>
+          VTC Members: <strong>{memberCount}</strong>
         </span>
 
-        <span className="separator">
-          •
-        </span>
+        <span className="separator">•</span>
 
         <span>
-          Online:{" "}
-          <strong className="online-text">
-            {onlineCount}
-          </strong>
+          Online: <strong className="online-text">{onlineCount}</strong>
         </span>
       </div>
     </header>
