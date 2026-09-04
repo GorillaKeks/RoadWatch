@@ -1,11 +1,11 @@
 {
-  "version": "0.1.3",
-  "notes": "RoadWatch v0.1.3: Live refresh, distance sorting and distance filtering improvements.",
+  "version": "0.1.4",
+  "notes": "RoadWatch v0.1.4: Live refresh, distance sorting and distance filtering improvements.",
   "pub_date": "2026-08-31T21:00:00Z",
   "platforms": {
     "windows-x86_64": {
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRRDRWTTl3YXZYUGo3UXQ4L05GcllKcmpPMDk0cVRtVHg1VXUzVXdPWGJBQncrYW9ycmVLMXdrQkVoMmFYeGY5REYwYlArZkNKSG4vTjhSZEpseGdERENOZnZSZVA2dUE4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4MjA2NjIyCWZpbGU6Um9hZFdhdGNoXzAuMS4zX3g2NC1zZXR1cC5leGUKNW1vNnU4QW9paHhxbmZoSDlTL1ZTRjVpTGxMVVcvd09naDdWV1RsUzZJazJ2OE84dTgzSmFyZ1ZmV2JiZjAzRUkrUTZjMGZIYnNkTEliWGYzelpCQVE9PQo=",
-      "url": "https://github.com/GorillaKeks/RoadWatch/releases/download/v0.1.3/RoadWatch_0.1.3_x64-setup.exe"
+      "url": "https://github.com/GorillaKeks/RoadWatch/releases/download/v0.1.3/RoadWatch_0.1.4_x64-setup.exe"
     }
   }
 }

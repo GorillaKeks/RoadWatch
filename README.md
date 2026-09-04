@@ -6,7 +6,7 @@ It combines live player data with VTC information to provide a clear overview of
 
 RoadWatch is designed to be lightweight, fast, and easy to use.
 
-> 🚧 **Current version: v0.1.3**
+> 🚧 **Current version: v0.1.4**
 
 ---
 
@@ -93,7 +93,7 @@ RoadWatch includes:
 
 The automatic update system has been successfully tested with:
 
-**RoadWatch v0.1.2 → v0.1.3**
+**RoadWatch v0.1.2 → v0.1.4**
 
 ---
 
