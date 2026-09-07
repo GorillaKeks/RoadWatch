@@ -28,13 +28,6 @@ Current functionality includes:
 
 ---
 
-## Legal
-
-- [Privacy Policy](PRIVACY.md)
-- [Terms of Service](TERMS.md)
-
----
-
 ## 📍 Locations & Distance System
 
 RoadWatch processes player positions and location information to provide distance-based monitoring.
@@ -311,6 +304,15 @@ All trademarks, game names, logos, and related assets belong to their respective
 # 🚧 Development
 
 RoadWatch v0.1.x establishes the technical foundation of the application.
+
+---
+
+## Legal
+
+- [Privacy Policy](PRIVACY.md)
+- [Terms of Service](TERMS.md)
+
+---
 
 The next major milestone is:
 
