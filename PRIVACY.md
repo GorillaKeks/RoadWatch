@@ -23,7 +23,7 @@ RoadWatch is an independent project and is not affiliated with, endorsed by, spo
 
 ## 3. Information Processed by RoadWatch
 
-Depending on the features being used, RoadWatch may process or display the following information:
+Depending on the features being used, RoadWatch may process or display information such as:
 
 - TruckersMP user ID (TruckersID)
 - TruckersMP username
@@ -39,13 +39,13 @@ Depending on the features being used, RoadWatch may process or display the follo
 - Distance between players
 - Timestamp information provided by live data sources
 
-This information is used only to provide the functionality of RoadWatch.
+RoadWatch uses this information only to provide its intended functionality.
 
-## 4. TruckersMP Information
+## 4. TruckersMP API
 
-RoadWatch uses the TruckersMP API to retrieve publicly available information relating to TruckersMP users, VTCs, VTC members, and servers.
+RoadWatch communicates with the TruckersMP API to retrieve information relating to TruckersMP users, VTCs, VTC members, and servers.
 
-Depending on the requested API data, this may include:
+Depending on the requested API endpoint, this may include:
 
 - TruckersMP user information
 - VTC information
@@ -53,13 +53,13 @@ Depending on the requested API data, this may include:
 - VTC roles or ranks
 - TruckersMP server information
 
-RoadWatch uses this information to provide VTC monitoring and related functionality.
+RoadWatch uses this information for player monitoring, VTC monitoring, server information, and related functionality.
 
-## 5. ETS2Map Live Data
+## 5. ETS2Map Live Tracker
 
-RoadWatch uses the ETS2Map live tracker to retrieve publicly available live player information.
+RoadWatch communicates with the ETS2Map live tracker to retrieve publicly available live player information.
 
-The information may include:
+This may include:
 
 - TruckersMP user ID
 - Player name
@@ -85,11 +85,11 @@ RoadWatch uses these identifiers to retrieve and match the relevant VTC informat
 
 The TruckersID and VTC ID entered by the user are stored locally on the user's computer.
 
-RoadWatch stores application configuration locally in its configuration file.
+RoadWatch stores application configuration in a local configuration file:
+
+`RoadWatch/settings.json`
 
 RoadWatch does not require a RoadWatch account and does not upload the user's configuration to a RoadWatch server.
-
-The user can remove the locally stored configuration by resetting or removing the application's local data.
 
 ## 8. Live Data Processing
 
@@ -104,36 +104,37 @@ This includes:
 - Calculating distances between players
 - Filtering and sorting players
 
-Distance calculations and location processing required by RoadWatch are performed locally by the application.
+Location resolution and distance calculations required by RoadWatch are performed locally by the application.
 
-## 9. Data Storage
+## 9. Data Storage and Retention
 
 RoadWatch does not operate its own central database containing TruckersMP player or VTC information.
 
-RoadWatch does not intentionally create or maintain a central historical database of player locations.
+RoadWatch does not intentionally maintain a central historical database of player locations.
 
-The application uses live information from external services while providing its functionality.
+Live information is processed while the application is running to provide its functionality.
 
-Local application settings are stored on the user's computer.
+Local configuration data remains on the user's computer until it is changed, reset, removed, or deleted together with the application's local data.
 
-External services may retain information according to their own policies.
+Third-party services may retain information according to their own policies.
 
-## 10. Data Sharing
+## 10. Data Sharing and External Connections
 
 RoadWatch does not sell personal data.
 
-RoadWatch does not provide personal data to advertisers or data brokers.
+RoadWatch does not intentionally provide personal data to advertisers or data brokers.
 
-RoadWatch communicates with external services required for its functionality, including:
+RoadWatch communicates directly with external services required for its functionality, including:
 
 - TruckersMP
 - ETS2Map
+- GitHub
 
-These services may independently process information according to their own terms and privacy policies.
+These services may independently process technical information, requests, or other data according to their own terms and privacy policies.
 
-RoadWatch does not control the data processing practices of these external services.
+RoadWatch does not control the independent processing activities of these services.
 
-## 11. Analytics and Tracking
+## 11. Analytics and Advertising
 
 RoadWatch does not intentionally use:
 
@@ -147,33 +148,31 @@ RoadWatch does not require users to create an online account.
 
 ## 12. Software Updates
 
-RoadWatch may check for available software updates using the project's public GitHub release information.
+RoadWatch can check for available software updates using the project's public GitHub release information.
 
-This functionality is used to determine whether a newer RoadWatch version is available.
+The update functionality communicates with the RoadWatch GitHub repository to determine whether a newer version is available and, when the user chooses to install it, to download the update.
 
-No RoadWatch user account is required for software updates.
+No RoadWatch account is required for software updates.
 
-## 13. Data Retention
+## 13. Application Logging
 
-RoadWatch does not intentionally retain historical live player data in a central RoadWatch database.
+RoadWatch may output technical diagnostic information to the local application console during operation.
 
-Live data is processed as required for the application's functionality.
+Such output is intended for troubleshooting and development purposes.
 
-Local configuration data remains on the user's computer until it is changed, reset, removed, or deleted together with the application's local data.
+RoadWatch does not intentionally maintain a central remote logging service.
 
-Third-party services may retain information according to their own policies.
+## 14. Legal Basis
 
-## 14. Data Security
+Where the General Data Protection Regulation (GDPR) applies, personal data is processed only where a valid legal basis exists under applicable data protection law.
 
-RoadWatch is designed to minimise unnecessary collection and storage of personal information.
+Depending on the specific processing activity, the applicable legal basis may include processing necessary to provide functionality requested by the user or legitimate interests in operating and maintaining an independent community software project, where applicable and where the interests, rights, and freedoms of individuals do not override those interests.
 
-The application does not require a central RoadWatch account or central user database.
-
-Users should download RoadWatch only from the official project repository or official release channels.
+The applicable legal basis may depend on the specific circumstances of the processing.
 
 ## 15. Your Rights
 
-Where applicable under the General Data Protection Regulation (GDPR), individuals may have rights including:
+Where applicable under the GDPR, individuals may have rights including:
 
 - Right to information
 - Right of access
@@ -184,18 +183,18 @@ Where applicable under the General Data Protection Regulation (GDPR), individual
 - Right to object to processing
 - Right to lodge a complaint with a competent data protection supervisory authority
 
-Requests concerning RoadWatch can be submitted to:
+Requests concerning processing for which Markus Bosch is responsible can be submitted to:
 
 **Markus Bosch**  
 **Email:** bosch.markus@protonmail.com
 
-Please note that information originating from TruckersMP or ETS2Map may be controlled or processed by those respective services. Requests concerning their independent processing activities may therefore need to be addressed to the respective service.
+Information independently processed by TruckersMP, ETS2Map, GitHub, or other third-party services may be subject to the respective service's own privacy policies and data-controller responsibilities.
 
-## 16. Data Obtained From Third Parties
+## 16. Information Obtained From Third Parties
 
 Some information displayed by RoadWatch is obtained from third-party services rather than directly from the individual concerned.
 
-The primary third-party sources currently used by RoadWatch are:
+The primary sources currently used by RoadWatch are:
 
 - TruckersMP API
 - ETS2Map live tracker
@@ -208,7 +207,7 @@ RoadWatch depends on external services for certain functionality.
 
 These services may change their APIs, availability, terms, privacy policies, or technical limitations.
 
-RoadWatch cannot guarantee the availability, accuracy, completeness, or continued availability of third-party information.
+RoadWatch cannot guarantee the availability, accuracy, completeness, or continued availability of information provided by third-party services.
 
 Users should review the applicable terms and privacy policies of the respective services.
 
@@ -222,7 +221,7 @@ RoadWatch does not knowingly operate a service designed to collect personal info
 
 This Privacy Policy may be updated when RoadWatch changes its functionality, data processing practices, or when applicable legal requirements change.
 
-The latest version will always be published with the RoadWatch project.
+The latest version will be published with the RoadWatch project.
 
 ## 20. Contact
 
